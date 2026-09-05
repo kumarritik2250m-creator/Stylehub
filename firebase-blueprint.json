@@ -1,0 +1,106 @@
+{
+  "entities": {
+    "products": {
+      "title": "Products Catalog",
+      "description": "Apparel products catalog in store",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "price": { "type": "number" },
+        "originalPrice": { "type": "number" },
+        "fabric": { "type": "string" },
+        "fit": { "type": "string" },
+        "occasion": { "type": "string" },
+        "category": { "type": "string" },
+        "badge": { "type": "string" },
+        "inStock": { "type": "boolean" },
+        "rating": { "type": "number" },
+        "primaryImage": { "type": "string" },
+        "alternateImages": { "type": "array", "items": { "type": "string" } },
+        "sizes": { "type": "array", "items": { "type": "string" } },
+        "colors": { "type": "array", "items": { "type": "string" } },
+        "description": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "title", "price", "category", "primaryImage"]
+    },
+    "orders": {
+      "title": "Customer Orders",
+      "description": "Orders placed by customers",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "customerEmail": { "type": "string" },
+        "customerName": { "type": "string" },
+        "customerPhone": { "type": "string" },
+        "shippingAddress": { "type": "string" },
+        "items": { "type": "array" },
+        "totalAmount": { "type": "number" },
+        "paymentId": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "customerEmail", "items", "totalAmount", "status"]
+    },
+    "reviews": {
+      "title": "Product Reviews",
+      "description": "Customer ratings and reviews for products",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "productId": { "type": "string" },
+        "author": { "type": "string" },
+        "email": { "type": "string" },
+        "rating": { "type": "number" },
+        "comment": { "type": "string" },
+        "verifiedPurchase": { "type": "boolean" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "productId", "rating", "comment", "author"]
+    },
+    "site_settings": {
+      "title": "Site Settings",
+      "description": "Store settings like ticker message and hero announcement",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "tickerMessage": { "type": "string" },
+        "heroTitle": { "type": "string" },
+        "heroSubtitle": { "type": "string" },
+        "heroImage": { "type": "string" },
+        "promoCode": { "type": "string" },
+        "promoDiscount": { "type": "number" }
+      }
+    },
+    "users": {
+      "title": "User Profiles",
+      "description": "Customer profile and wishlist data",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "email": { "type": "string" },
+        "name": { "type": "string" },
+        "phone": { "type": "string" },
+        "wishlist": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "coupons": {
+      "title": "Promo Coupons",
+      "description": "Discount promo codes with percentage, min order, and terms",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "code": { "type": "string" },
+        "discountPercent": { "type": "number" },
+        "minOrder": { "type": "number" },
+        "maxDiscount": { "type": "number" },
+        "description": { "type": "string" },
+        "terms": { "type": "string" },
+        "active": { "type": "boolean" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "code", "discountPercent"]
+    }
+  }
+}

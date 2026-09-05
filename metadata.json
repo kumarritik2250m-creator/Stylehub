@@ -1,0 +1,6 @@
+{
+  "name": "XPORD",
+  "description": "A premium modern e-commerce clothing web application for XPORD Clothing featuring dynamic filtering, URL parameter routing, dual-image hover transitions, search, and a sliding cart drawer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,2060 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>XPORD | Culture & Craft - Luxury Modern Apparel</title>
+    <meta name="description" content="Discover XPORD's modern collection of luxury streetwear, velvet shirts, flannel boxy fits, and tailored viscose trousers." />
+    <link rel="canonical" href="https://ai.studio" />
+    <meta name="author" content="Xpord Private Limited" />
+    <meta name="distribution" content="global" />
+    
+    <!-- Structured Data (JSON-LD) for Local Clothing Store SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ClothingStore",
+      "name": "Xpord Clothing",
+      "url": "https://ai.studio",
+      "logo": "https://unsplash.com",
+      "description": "Premium youth streetwear and contemporary apparel brand based in Jharkhand, India.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jamua Giridih",
+        "addressLocality": "Giridih",
+        "addressRegion": "JH",
+        "postalCode": "825412",
+        "addressCountry": "IN"
+      },
+      "telephone": "+917645930314"
+    }
+    </script>
+    
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="googlec8a95c411f6f4af8" />
+    <meta name="google-site-verification" content="googlec8a95c411f6f4af8.html" />
+    
+    <!-- Google Fonts & Fontshare for Satoshi & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400,300,301,401,501,701,901&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Razorpay Standard Checkout SDK Gateway Loader -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Global Function Bridge to Prevent Any ReferenceErrors in Inline Event Handlers -->
+    <script>
+      (function() {
+        const fns = [
+          'openCheckoutModal', 'closeCheckoutModal', 'handleApplyCoupon', 'startAiUrlExtraction', 'switchAiCopilotMode', 'openAiCopilotModal',
+          'closeAiCopilotModal', 'pasteClipboardToAiInput', 'loadSampleAiUrl', 'sendAiQuickPrompt',
+          'sendAiChatMessage', 'clearAiChatConversation', 'selectAiExtractedCoverImg', 'publishAiExtractedProduct',
+          'openExtractedInFullEditor', 'handleAiChatSubmit', 'openCouponsModal', 'closeCouponsModal',
+          'openWishlistModal', 'closeWishlistModal', 'openOrdersModal', 'closeOrdersModal',
+          'openUserModal', 'closeUserModal', 'openAdminPanel', 'closeAdminModal', 'openModal',
+          'closeModal', 'closeMobileNavDrawer', 'closeQuickViewModal',
+          'closeCancelOrderModal', 'closeCannotCancelModal', 'selectCancelReason', 'confirmCancelOrder',
+          'selectPaymentMethod', 'handleProceedPayment', 'saveStoreSettingsUI', 'submitNewCouponFromAdmin',
+          'hideAdminCouponAlert', 'resetCouponsToDefault', 'renderAdminCatalogList', 'resetProductsToDefault',
+          'handleProductImageFileUpload', 'handleProductImageUrlInput', 'handleMultipleAltImagesUpload',
+          'addAltImageUrlFromInput', 'clearAllAltImages', 'addToCart', 'selectModalSize',
+          'switchQuickViewImgByIndex', 'navigateQuickViewGallery', 'submitProductReview',
+          'applyCouponQuickly', 'removeAppliedCoupon', 'copyCouponCode', 'openQuickView', 'toggleWishlist',
+          'openCartDrawer', 'closeCartDrawer', 'renderAddressAndPaymentModal', 'getUserOrders', 'generateXpordInvoice',
+          'selectProductSize', 'removeFilterChip', 'resetAllFilters', 'toggleAdminSize', 'setStandardSizes',
+          'setDiscountPreset', 'handleBadgePresetChange', 'updateSectionPreviewBox', 'addCustomAdminSize',
+          'handlePriceCalculation', 'clearAllOrdersFromAdmin', 'closeAdminPinModal', 'closeSizeGuideModal',
+          'openSizeGuideModal', 'switchSizeGuideUnit', 'switchAdminTab', 'switchXpordAiTab', 'pasteClipboardToXpordAi',
+          'loadXpordAiSample', 'analyzeProductUrlWithAI', 'updateXpordAiImagePreview', 'resetXpordAiReviewForm',
+          'publishExtractedProductToFirestore', 'sendXpordAiPrompt', 'handleXpordAdminChatSubmit', 'removeCartItem',
+          'updateCartQty', 'deleteProductFromAdmin', 'deleteCouponFromAdmin', 'deleteSingleOrderFromAdmin',
+          'toggleCouponActiveState', 'updateOrderStatusFromAdmin', 'changeAdminZoom', 'toggleAdminFullscreen', 'resetAdminZoom',
+          'toggleHeaderMoreMenu', 'closeHeaderMoreMenu', 'handleQuickCategoryFilter'
+        ];
+        fns.forEach(fn => {
+          if (!window[fn]) {
+            const stub = function(...args) {
+              if (window['_' + fn] && typeof window['_' + fn] === 'function') {
+                return window['_' + fn](...args);
+              }
+              setTimeout(() => {
+                if (window[fn] && window[fn] !== stub) {
+                  window[fn](...args);
+                } else if (window['_' + fn]) {
+                  window['_' + fn](...args);
+                }
+              }, 100);
+            };
+            window[fn] = stub;
+          }
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- Top Announcement Bar -->
+    <div id="promo-banner" class="promo-banner">
+      <div class="promo-content">
+        <span class="promo-sparkle">✨</span>
+        <span class="promo-text">COMPLIMENTARY EXPRESS SHIPPING ON ORDERS ABOVE ₹1,999 | USE CODE <strong class="coupon-highlight">XPORD20</strong> FOR 20% OFF</span>
+        <span class="promo-sparkle">✨</span>
+      </div>
+      <button id="close-promo" class="promo-close-btn" aria-label="Close Announcement"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <!-- Sticky Navigation Header -->
+    <header id="main-header" class="main-header">
+      <div class="header-container">
+        <!-- Brand Logo with Gold Monogram Mark -->
+        <a href="/" class="brand-logo" id="brand-home-link" aria-label="XPORD Clothing Home">
+          <div class="brand-logo-mark">
+            <svg class="brand-logo-svg" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="xpordGoldGradHdr" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#C59B27"/>
+                  <stop offset="25%" stop-color="#E5C158"/>
+                  <stop offset="50%" stop-color="#FDF0A6"/>
+                  <stop offset="75%" stop-color="#D4AF37"/>
+                  <stop offset="100%" stop-color="#AA771C"/>
+                </linearGradient>
+                <filter id="goldShineHdr" x="-10%" y="-10%" width="120%" height="120%">
+                  <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#8c6d1f" flood-opacity="0.35"/>
+                </filter>
+              </defs>
+              <!-- Shopping Bag Handle Arch -->
+              <path d="M48 38 C48 20 72 20 72 38" stroke="url(#xpordGoldGradHdr)" stroke-width="5" stroke-linecap="round" fill="none"/>
+              <!-- Left Upper Wing of X -->
+              <path d="M22 38 L44 38 L54 54 L36 54 Z" fill="url(#xpordGoldGradHdr)"/>
+              <!-- Shopping Bag Center -->
+              <path d="M42 38 L78 38 L72 70 L48 70 Z" fill="url(#xpordGoldGradHdr)"/>
+              <!-- Bottom Left Leg of X -->
+              <path d="M24 84 L42 84 L56 62 L42 62 Z" fill="url(#xpordGoldGradHdr)"/>
+              <!-- Bottom Right Leg of X -->
+              <path d="M68 62 L82 84 L100 84 L80 62 Z" fill="url(#xpordGoldGradHdr)"/>
+              <!-- Dynamic Upward Growth Arrow Swoosh -->
+              <path d="M20 76 Q 50 68 80 44 L76 36 L108 26 L100 58 L92 50 Q 64 74 20 76 Z" fill="url(#xpordGoldGradHdr)" filter="url(#goldShineHdr)"/>
+            </svg>
+          </div>
+          <div class="brand-text-group">
+            <span class="brand-title">xpord</span>
+            <span class="brand-sub">CLOTHING</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="nav-links" aria-label="Main Navigation">
+          <a href="#" class="nav-link active" data-category="all">All Items</a>
+          <a href="#" class="nav-link" data-category="trending">Trending</a>
+          <a href="#" class="nav-link" data-category="new">New Arrivals</a>
+          <a href="#" class="nav-link" data-category="shirts">Shirts</a>
+          <a href="#" class="nav-link" data-category="trousers">Trousers</a>
+          <a href="#" class="nav-link" data-category="jackets">Jackets</a>
+        </nav>
+
+        <!-- Search & Utility Controls -->
+        <div class="header-actions">
+          <!-- Real-Time Search Bar -->
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="search-input" placeholder="Search velvet, linen, flannel..." autocomplete="off" spellcheck="false" />
+            <button id="clear-search" class="clear-search-btn hidden" aria-label="Clear Search"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+
+          <!-- Wishlist Toggle Button -->
+          <button id="wishlist-btn" class="header-icon-btn" aria-label="Wishlist" title="Wishlist">
+            <i class="fa-regular fa-heart"></i>
+            <span class="icon-btn-text">Wishlist</span>
+            <span id="wishlist-count" class="icon-badge hidden">0</span>
+          </button>
+
+          <!-- My Orders Button -->
+          <button id="orders-btn" class="header-icon-btn" aria-label="My Orders" title="My Orders">
+            <i class="fa-solid fa-box-open"></i>
+            <span class="icon-btn-text">Orders</span>
+            <span id="orders-count" class="icon-badge hidden">0</span>
+          </button>
+
+          <!-- User Account / Profile Button -->
+          <button id="user-profile-btn" class="header-icon-btn" aria-label="User Account" title="Register or Login">
+            <i class="fa-regular fa-user"></i>
+            <span class="icon-btn-text" id="user-btn-text">Register or Login</span>
+          </button>
+
+          <!-- Cart Drawer Toggle Button -->
+          <button id="cart-toggle-btn" class="header-icon-btn cart-btn" aria-label="Open Shopping Bag" title="Shopping Bag">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="icon-btn-text">Bag</span>
+            <span id="cart-count" class="icon-badge">0</span>
+          </button>
+
+          <!-- 3-Dot Quick Access Menu (Organized header quick access for bottom page links & customer services) -->
+          <div class="header-more-menu-wrapper" id="header-more-menu-wrapper">
+            <button id="header-more-btn" class="header-icon-btn header-more-btn" aria-label="More Options & Services" title="Menu & Services" onclick="toggleHeaderMoreMenu(event)">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+            <div id="header-more-dropdown" class="header-more-dropdown hidden">
+              <div class="more-menu-top">
+                <span class="more-menu-badge"><i class="fa-solid fa-compass"></i> QUICK ACCESS MENU</span>
+                <button type="button" class="more-menu-close-btn" onclick="closeHeaderMoreMenu()" aria-label="Close menu">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+
+              <div class="more-menu-body">
+                <!-- Group 1: Customer Care & Services -->
+                <div class="more-menu-section">
+                  <div class="more-menu-section-title">
+                    <i class="fa-solid fa-headset" style="color:#cca036;"></i> Customer Care
+                  </div>
+                  <div class="more-menu-grid">
+                    <button type="button" class="more-menu-item" onclick="closeHeaderMoreMenu(); openModal('shipping');">
+                      <i class="fa-solid fa-truck-fast"></i>
+                      <span>Shipping & Delivery</span>
+                    </button>
+                    <button type="button" class="more-menu-item" onclick="closeHeaderMoreMenu(); openModal('returns');">
+                      <i class="fa-solid fa-rotate-left"></i>
+                      <span>Returns & Exchanges</span>
+                    </button>
+                    <button type="button" class="more-menu-item" onclick="closeHeaderMoreMenu(); openModal('contact');">
+                      <i class="fa-regular fa-envelope"></i>
+                      <span>Contact Us</span>
+                    </button>
+                    <button type="button" class="more-menu-item" onclick="closeHeaderMoreMenu(); openSizeGuideModal();">
+                      <i class="fa-solid fa-ruler-combined"></i>
+                      <span>Size & Fit Guide</span>
+                    </button>
+                    <a href="https://wa.me/917687894396?text=Hello%20XPORD%2C%20I%20need%20assistance" target="_blank" class="more-menu-item" onclick="closeHeaderMoreMenu();">
+                      <i class="fa-brands fa-whatsapp" style="color:#25D366;"></i>
+                      <span>WhatsApp Concierge</span>
+                    </a>
+                    <button type="button" class="more-menu-item" onclick="closeHeaderMoreMenu(); openCouponsModal();">
+                      <i class="fa-solid fa-tags" style="color:#cca036;"></i>
+                      <span>Offers & Promo Codes</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Group 2: Policy & Brand Legal -->
+                <div class="more-menu-section">
+                  <div class="more-menu-section-title">
+                    <i class="fa-solid fa-shield-halved" style="color:#cca036;"></i> Policies & Brand
+                  </div>
+                  <div class="more-menu-grid">
+                    <button type="button" class="more-menu-item" onclick="closeHeaderMoreMenu(); openModal('privacy');">
+                      <i class="fa-solid fa-user-shield"></i>
+                      <span>Privacy Policy</span>
+                    </button>
+                    <button type="button" class="more-menu-item" onclick="closeHeaderMoreMenu(); openModal('terms');">
+                      <i class="fa-solid fa-file-contract"></i>
+                      <span>Terms & Conditions</span>
+                    </button>
+                    <button type="button" class="more-menu-item" onclick="closeHeaderMoreMenu(); openModal('about');">
+                      <i class="fa-solid fa-circle-info"></i>
+                      <span>About XPORD</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Group 3: Explore Collections -->
+                <div class="more-menu-section">
+                  <div class="more-menu-section-title">
+                    <i class="fa-solid fa-layer-group" style="color:#cca036;"></i> Explore Collections
+                  </div>
+                  <div class="more-menu-grid">
+                    <button type="button" class="more-menu-item" onclick="closeHeaderMoreMenu(); handleQuickCategoryFilter('trending');">
+                      <i class="fa-solid fa-fire"></i>
+                      <span>Bestsellers</span>
+                    </button>
+                    <button type="button" class="more-menu-item" onclick="closeHeaderMoreMenu(); handleQuickCategoryFilter('new');">
+                      <i class="fa-solid fa-sparkles"></i>
+                      <span>New Drops</span>
+                    </button>
+                    <button type="button" class="more-menu-item" onclick="closeHeaderMoreMenu(); handleQuickCategoryFilter('shirts');">
+                      <i class="fa-solid fa-shirt"></i>
+                      <span>Heavyweight Shirts</span>
+                    </button>
+                    <button type="button" class="more-menu-item" onclick="closeHeaderMoreMenu(); handleQuickCategoryFilter('trousers');">
+                      <i class="fa-solid fa-user-ninja"></i>
+                      <span>Pleated Trousers</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Group 4: Administrative Management -->
+                <div class="more-menu-section more-menu-admin-section">
+                  <button type="button" class="more-menu-admin-btn" onclick="closeHeaderMoreMenu(); openAdminPanel();">
+                    <div class="more-menu-admin-icon">
+                      <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="more-menu-admin-text">
+                      <strong>Admin Management Portal</strong>
+                      <span>Manage catalog, live orders & banners</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right more-menu-admin-arrow"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobile-nav-drawer" class="mobile-nav-drawer">
+        <div class="mobile-nav-header">
+          <div class="brand-logo" style="gap: 0.5rem;">
+            <div class="brand-logo-mark" style="width: 30px; height: 30px;">
+              <svg class="brand-logo-svg" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M48 38 C48 20 72 20 72 38" stroke="url(#xpordGoldGradHdr)" stroke-width="5" stroke-linecap="round" fill="none"/>
+                <path d="M22 38 L44 38 L54 54 L36 54 Z" fill="url(#xpordGoldGradHdr)"/>
+                <path d="M42 38 L78 38 L72 70 L48 70 Z" fill="url(#xpordGoldGradHdr)"/>
+                <path d="M24 84 L42 84 L56 62 L42 62 Z" fill="url(#xpordGoldGradHdr)"/>
+                <path d="M68 62 L82 84 L100 84 L80 62 Z" fill="url(#xpordGoldGradHdr)"/>
+                <path d="M20 76 Q 50 68 80 44 L76 36 L108 26 L100 58 L92 50 Q 64 74 20 76 Z" fill="url(#xpordGoldGradHdr)"/>
+              </svg>
+            </div>
+            <div class="brand-text-group">
+              <span class="brand-title" style="font-size: 1.4rem;">xpord</span>
+              <span class="brand-sub" style="font-size: 0.5rem;">CLOTHING</span>
+            </div>
+          </div>
+          <button id="close-mobile-nav" class="close-drawer-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="mobile-nav-links">
+          <a href="#" class="mobile-nav-link active" data-category="all"><i class="fa-solid fa-border-all"></i> All Collections</a>
+          <a href="#" class="mobile-nav-link" data-category="trending"><i class="fa-solid fa-fire"></i> Trending Now</a>
+          <a href="#" class="mobile-nav-link" data-category="new"><i class="fa-solid fa-sparkles"></i> New Arrivals</a>
+          <a href="#" class="mobile-nav-link" data-category="shirts"><i class="fa-solid fa-shirt"></i> Shirts Collection</a>
+          <a href="#" class="mobile-nav-link" data-category="trousers"><i class="fa-solid fa-user-ninja"></i> Trousers & Chinos</a>
+          <a href="#" class="mobile-nav-link" data-category="jackets"><i class="fa-solid fa-vest"></i> Jackets & Blazers</a>
+          
+          <div style="margin: 1rem 0; border-top: 1px solid var(--border-medium); padding-top: 1rem; display: flex; flex-direction: column; gap: 0.8rem;">
+            <a href="#" class="mobile-nav-link" onclick="closeMobileNavDrawer(); openWishlistModal();"><i class="fa-regular fa-heart"></i> Saved Wishlist</a>
+            <a href="#" class="mobile-nav-link" onclick="closeMobileNavDrawer(); openOrdersModal();"><i class="fa-solid fa-box-open"></i> My Orders & Tracking</a>
+            <a href="#" class="mobile-nav-link" onclick="closeMobileNavDrawer(); if(window.openAccountView) window.openAccountView(); else openUserModal();"><i class="fa-regular fa-user"></i> Account Profile</a>
+            <a href="#" class="mobile-nav-link" onclick="closeMobileNavDrawer(); openAdminPanel();"><i class="fa-solid fa-sliders"></i> Admin Portal</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Editorial Hero Section -->
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-tag">AUTUMN / WINTER 2026</span>
+        <h1 class="hero-title">REDEFINING MODERN SILHOUETTES</h1>
+        <p class="hero-subtitle">Heavyweight micro-velvet, Japanese slub linen, and masterfully pleated viscose tailored for statement street elegance.</p>
+        <div class="hero-cta-group">
+          <button class="hero-btn primary-btn" id="hero-explore-btn">Explore Collection <i class="fa-solid fa-arrow-right"></i></button>
+          <span class="hero-stat-item"><i class="fa-solid fa-rotate-left"></i> Easy 15-Day Exchange</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bento-Style Category Grid Section (Category-First Workflow) -->
+    <section id="category-bento-section" class="category-bento-section">
+      <div class="container">
+        <div class="bento-header">
+          <span class="bento-tag">CURATED DEPARTMENTS</span>
+          <h2 class="bento-title">SELECT A CATEGORY</h2>
+          <p class="bento-subtitle">Choose a silhouette collection below to explore tailored pieces, technical fabrics, and limited releases.</p>
+        </div>
+        
+        <div class="bento-grid">
+          <!-- Bento Card 1: Shirts -->
+          <article class="bento-card" onclick="window.selectBentoCategory('shirts')" data-bento-category="shirts" tabindex="0" role="button" aria-label="Browse Shirts Collection">
+            <div class="bento-card-bg" style="background-image: url('https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="bento-card-overlay"></div>
+            <div class="bento-card-content">
+              <span class="bento-badge">SIGNATURE</span>
+              <h3 class="bento-card-title">SHIRTS &amp; OVERSHIRTS</h3>
+              <p class="bento-card-desc">Heavyweight micro-velvet, organic slub cotton, &amp; Cuban collars</p>
+              <div class="bento-card-cta">
+                <span>EXPLORE SHIRTS</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bento Card 2: Jackets & Outerwear -->
+          <article class="bento-card" onclick="window.selectBentoCategory('jackets')" data-bento-category="jackets" tabindex="0" role="button" aria-label="Browse Jackets Collection">
+            <div class="bento-card-bg" style="background-image: url('https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="bento-card-overlay"></div>
+            <div class="bento-card-content">
+              <span class="bento-badge">OUTERWEAR</span>
+              <h3 class="bento-card-title">JACKETS &amp; COATS</h3>
+              <p class="bento-card-desc">Flannel truckers, thermal-lined fleece, &amp; utility overshirts</p>
+              <div class="bento-card-cta">
+                <span>EXPLORE JACKETS</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bento Card 3: Trousers & Bottomwear (Full-width feature card) -->
+          <article class="bento-card bento-card-full" onclick="window.selectBentoCategory('trousers')" data-bento-category="trousers" tabindex="0" role="button" aria-label="Browse Trousers & Bottomwear Collection">
+            <div class="bento-card-bg" style="background-image: url('https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=1200&auto=format&fit=crop');"></div>
+            <div class="bento-card-overlay"></div>
+            <div class="bento-card-content">
+              <span class="bento-badge">TAILORED BOTTOMWEAR</span>
+              <h3 class="bento-card-title">TROUSERS &amp; CARGOS</h3>
+              <p class="bento-card-desc">Italian pleated viscose blends, heavy bungee cargos, &amp; relaxed streetwear bottoms</p>
+              <div class="bento-card-cta">
+                <span>EXPLORE BOTTOMWEAR</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Dual-Column E-Commerce Section -->
+    <main id="app-main" class="main-layout container hidden">
+      <!-- Mobile Filter Trigger Button -->
+      <div class="mobile-filter-bar">
+        <button id="open-filter-drawer-btn" class="mobile-filter-btn">
+          <i class="fa-solid fa-sliders"></i> Filter & Refine <span id="mobile-filter-count-badge" class="filter-badge hidden">0</span>
+        </button>
+        <div class="mobile-sort-wrapper">
+          <label for="mobile-sort-select" class="sr-only">Sort By</label>
+          <select id="mobile-sort-select" class="sort-select">
+            <option value="featured">Featured</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Customer Rating</option>
+            <option value="newest">Newest Drops</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Left Column: Sidebar Filters -->
+      <aside id="sidebar-filters" class="sidebar-filters">
+        <div class="sidebar-header">
+          <div class="sidebar-title-group">
+            <i class="fa-solid fa-sliders"></i>
+            <h2>Filter Catalog</h2>
+          </div>
+          <button id="clear-filters-btn" class="clear-filters-btn">Clear All</button>
+          <button id="close-filter-drawer-btn" class="close-filter-drawer-btn" aria-label="Close Filters"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <!-- Filter Accordion Group 1: Fabric -->
+        <div class="filter-group">
+          <div class="filter-group-header">
+            <h3>Fabric Type</h3>
+            <i class="fa-solid fa-chevron-down filter-toggle-icon"></i>
+          </div>
+          <div class="filter-group-body">
+            <label class="custom-checkbox">
+              <input type="checkbox" name="fabric" value="Cotton" data-filter="fabric" />
+              <span class="checkmark"></span>
+              <span class="label-text">Cotton & Organic Slub</span>
+            </label>
+            <label class="custom-checkbox">
+              <input type="checkbox" name="fabric" value="Velvet" data-filter="fabric" />
+              <span class="checkmark"></span>
+              <span class="label-text">Heavy Micro-Velvet</span>
+            </label>
+            <label class="custom-checkbox">
+              <input type="checkbox" name="fabric" value="Flannel" data-filter="fabric" />
+              <span class="checkmark"></span>
+              <span class="label-text">Brushed Flannel</span>
+            </label>
+            <label class="custom-checkbox">
+              <input type="checkbox" name="fabric" value="Viscose" data-filter="fabric" />
+              <span class="checkmark"></span>
+              <span class="label-text">Luxe Viscose Twill</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Filter Accordion Group 2: Fit -->
+        <div class="filter-group">
+          <div class="filter-group-header">
+            <h3>Fit Preference</h3>
+            <i class="fa-solid fa-chevron-down filter-toggle-icon"></i>
+          </div>
+          <div class="filter-group-body">
+            <label class="custom-checkbox">
+              <input type="checkbox" name="fit" value="Oversized" data-filter="fit" />
+              <span class="checkmark"></span>
+              <span class="label-text">Oversized / Relaxed</span>
+            </label>
+            <label class="custom-checkbox">
+              <input type="checkbox" name="fit" value="Regular" data-filter="fit" />
+              <span class="checkmark"></span>
+              <span class="label-text">Regular Fit</span>
+            </label>
+            <label class="custom-checkbox">
+              <input type="checkbox" name="fit" value="Slim Fit" data-filter="fit" />
+              <span class="checkmark"></span>
+              <span class="label-text">Slim Tailored Fit</span>
+            </label>
+            <label class="custom-checkbox">
+              <input type="checkbox" name="fit" value="Boxy Fit" data-filter="fit" />
+              <span class="checkmark"></span>
+              <span class="label-text">Boxy Cropped</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Filter Accordion Group 3: Occasion -->
+        <div class="filter-group">
+          <div class="filter-group-header">
+            <h3>Occasion</h3>
+            <i class="fa-solid fa-chevron-down filter-toggle-icon"></i>
+          </div>
+          <div class="filter-group-body">
+            <label class="custom-checkbox">
+              <input type="checkbox" name="occasion" value="Casual" data-filter="occasion" />
+              <span class="checkmark"></span>
+              <span class="label-text">Everyday Casual</span>
+            </label>
+            <label class="custom-checkbox">
+              <input type="checkbox" name="occasion" value="Party" data-filter="occasion" />
+              <span class="checkmark"></span>
+              <span class="label-text">Night Out / Party</span>
+            </label>
+            <label class="custom-checkbox">
+              <input type="checkbox" name="occasion" value="Formal" data-filter="occasion" />
+              <span class="checkmark"></span>
+              <span class="label-text">Formal & Workwear</span>
+            </label>
+            <label class="custom-checkbox">
+              <input type="checkbox" name="occasion" value="Streetwear" data-filter="occasion" />
+              <span class="checkmark"></span>
+              <span class="label-text">Urban Streetwear</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Filter Accordion Group 4: Price Range -->
+        <div class="filter-group">
+          <div class="filter-group-header">
+            <h3>Max Price</h3>
+            <i class="fa-solid fa-chevron-down filter-toggle-icon"></i>
+          </div>
+          <div class="filter-group-body">
+            <div class="price-slider-container">
+              <input type="range" id="price-range" min="1500" max="8000" step="250" value="8000" />
+              <div class="price-range-labels">
+                <span>₹1,500</span>
+                <span id="price-range-value" class="current-price-badge">₹8,000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter Accordion Group 5: Availability -->
+        <div class="filter-group">
+          <div class="filter-group-header">
+            <h3>Availability</h3>
+            <i class="fa-solid fa-chevron-down filter-toggle-icon"></i>
+          </div>
+          <div class="filter-group-body">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="in-stock-checkbox" />
+              <span class="checkmark"></span>
+              <span class="label-text">In Stock Items Only</span>
+            </label>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Right Column: Product Display Grid -->
+      <section id="product-section" class="product-section">
+        <!-- Sub-Category & Attribute Kinetic Quick Pills (Positioned Above All Categories Header) -->
+        <div id="mobile-kinetic-filter-bar" class="mobile-kinetic-filter-bar">
+          <div class="kinetic-chips-track">
+            <button type="button" class="kinetic-chip" data-kinetic-filter="sleeve" data-value="Full Sleeve" onclick="toggleKineticFilter('sleeve', 'Full Sleeve')">
+              <span>FULL SLEEVES</span>
+            </button>
+            <button type="button" class="kinetic-chip" data-kinetic-filter="sleeve" data-value="Half Sleeve" onclick="toggleKineticFilter('sleeve', 'Half Sleeve')">
+              <span>HALF SLEEVES</span>
+            </button>
+            <button type="button" class="kinetic-chip" data-kinetic-filter="fit" data-value="Slim Fit" onclick="toggleKineticFilter('fit', 'Slim Fit')">
+              <span>SLIM FIT</span>
+            </button>
+            <button type="button" class="kinetic-chip" data-kinetic-filter="fit" data-value="Regular Fit" onclick="toggleKineticFilter('fit', 'Regular Fit')">
+              <span>REGULAR FIT</span>
+            </button>
+            <button type="button" class="kinetic-chip" data-kinetic-filter="fit" data-value="Oversized" onclick="toggleKineticFilter('fit', 'Oversized')">
+              <span>OVERSIZED</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Section Controls Header with Back Button and Active Collection Details -->
+        <div class="product-controls-header">
+          <div class="results-info">
+            <button type="button" id="back-to-categories-btn" class="back-to-categories-btn" onclick="window.showCategoryLandingView()" aria-label="Return to Category Overview">
+              <i class="fa-solid fa-arrow-left"></i>
+              <span>All Categories</span>
+            </button>
+            <div class="collection-title-wrap">
+              <h2 id="collection-heading" class="collection-heading">All Collections</h2>
+              <span id="product-count-text" class="product-count-text">Showing 0 products</span>
+            </div>
+          </div>
+
+          <!-- Desktop Sort Dropdown -->
+          <div class="desktop-sort-wrapper">
+            <label for="desktop-sort-select">Sort By:</label>
+            <select id="desktop-sort-select" class="sort-select">
+              <option value="featured">Featured</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Customer Rating</option>
+              <option value="newest">Newest Drops</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Active Filter Tags / Chips Bar -->
+        <div id="active-filter-chips" class="active-filter-chips hidden">
+          <span class="chips-label">Active Filters:</span>
+          <div id="chips-container" class="chips-container"></div>
+          <button id="reset-chips-btn" class="reset-chips-btn">Clear All</button>
+        </div>
+
+        <!-- Product Cards Grid Container -->
+        <div id="product-grid" class="product-grid">
+          <!-- Cards injected dynamically via JS -->
+        </div>
+
+        <!-- Fallback "No Products Found" State -->
+        <div id="empty-state" class="empty-state hidden">
+          <div class="empty-icon"><i class="fa-solid fa-shirt"></i></div>
+          <h3>No Matching Apparel Found</h3>
+          <p>We couldn't find any products matching your specific filter criteria or search query.</p>
+          <button id="empty-reset-btn" class="primary-btn">Reset All Filters</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Dedicated Clean Minimalist User Account / Profile Dashboard View (Chapter 2 Design) -->
+    <div id="xpordAccountView" class="xpord-account-view container hidden">
+      <!-- Breadcrumb / Header Navigation Row -->
+      <div class="account-nav-bar">
+        <button type="button" class="account-back-btn" onclick="window.closeAccountView()">
+          <i class="fa-solid fa-arrow-left"></i> <span>Back to Collections</span>
+        </button>
+        <div class="account-nav-meta">
+          <span class="account-view-tag">CUSTOMER DASHBOARD</span>
+        </div>
+      </div>
+
+      <!-- Account Dashboard Dynamic Container -->
+      <div id="xpord-account-content">
+        <!-- Injected dynamically via script.js (Logged-in vs Guest State) -->
+      </div>
+    </div>
+
+    <!-- Decorative Bold Watermark Banner -->
+    <div class="bold-watermark-strip">
+      <span class="watermark-item">STYLE</span>
+      <span class="watermark-item">CRAFT</span>
+      <span class="watermark-item">XPORD</span>
+    </div>
+
+    <!-- Value Proposition Banner -->
+    <section class="trust-banner">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <i class="fa-solid fa-truck-fast"></i>
+          <div class="trust-text">
+            <h4>Free Shipping Across India</h4>
+            <p>On all orders above ₹1,999</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <i class="fa-solid fa-rotate-left"></i>
+          <div class="trust-text">
+            <h4>15-Day Doorstep Returns</h4>
+            <p>Hassle-free size exchanges</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <i class="fa-solid fa-shield-halved"></i>
+          <div class="trust-text">
+            <h4>100% Verified Craft</h4>
+            <p>Premium fabrics & ethical mills</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sliding Cart Drawer Container -->
+    <div id="cart-drawer-wrapper" class="cart-drawer-wrapper">
+      <div id="cart-backdrop" class="cart-backdrop"></div>
+      <aside id="cart-drawer" class="cart-drawer" aria-label="Shopping Cart">
+        <!-- Drawer Header (Screen 1 Dribbble Style: < Cart) -->
+        <div class="cart-drawer-header">
+          <div class="cart-header-left-group">
+            <button id="close-cart-drawer" class="cart-back-btn" aria-label="Close Bag" title="Back to store">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <h3 class="cart-nav-title">Cart</h3>
+          </div>
+          <span id="cart-drawer-count" class="cart-drawer-count-badge">0 items</span>
+        </div>
+
+        <!-- Free Shipping Progress Bar -->
+        <div class="free-shipping-progress">
+          <p id="shipping-progress-text" class="shipping-progress-text">🎉 Complimentary Express Shipping on All Orders!</p>
+          <div class="progress-bar-track">
+            <div id="shipping-progress-fill" class="progress-bar-fill" style="width: 100%;"></div>
+          </div>
+        </div>
+
+        <!-- Cart Items List Container -->
+        <div id="cart-items-container" class="cart-items-container">
+          <!-- Injected dynamically via JS -->
+        </div>
+
+        <!-- Cart Footer & Summary -->
+        <div id="cart-footer" class="cart-footer">
+          <!-- Coupon Code Section -->
+          <div class="coupon-section">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.4rem;">
+              <span style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--text-secondary); display:flex; align-items:center; gap:0.35rem;">
+                <i class="fa-solid fa-tags" style="color:var(--accent-gold);"></i> Promo Codes & Offers
+              </span>
+              <button type="button" id="open-coupons-modal-btn" onclick="openCouponsModal()" style="background:none; border:none; color:var(--accent-gold); font-size:0.75rem; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:0.3rem; padding:0.2rem 0.4rem; border-radius:var(--radius-xs); transition:opacity 0.2s;" title="View all available promo codes">
+                <i class="fa-solid fa-ticket"></i> View All Offers <i class="fa-solid fa-chevron-right" style="font-size:0.65rem;"></i>
+              </button>
+            </div>
+
+            <!-- Single Clean Promo Code Input Group -->
+            <div class="coupon-input-group">
+              <i class="fa-solid fa-tag coupon-icon"></i>
+              <input type="text" id="coupon-input" placeholder="Enter promo code" uppercase onkeydown="if(event.key==='Enter'){ event.preventDefault(); if(window.handleApplyCoupon) window.handleApplyCoupon(); }" />
+              <button id="apply-coupon-btn" class="apply-coupon-btn" onclick="if(window.handleApplyCoupon) window.handleApplyCoupon();">Apply code</button>
+            </div>
+
+            <!-- Applied Promo Code Badge (Appears instantly below the input with celebration animation) -->
+            <div id="cart-applied-coupon-banner"></div>
+            <div id="coupon-feedback" class="coupon-feedback hidden"></div>
+          </div>
+
+          <!-- Checkout Calculation Breakdown -->
+          <div class="cart-breakdown">
+            <div class="breakdown-row">
+              <span>Subtotal</span>
+              <span id="cart-subtotal-text">₹0</span>
+            </div>
+            <div id="discount-row" class="breakdown-row discount-row hidden">
+              <span>Promo Discount (<span id="discount-percent-tag">0%</span>)</span>
+              <span id="cart-discount-text">-₹0</span>
+            </div>
+            <div class="breakdown-row">
+              <span>Shipping</span>
+              <span id="cart-shipping-text"><strong style="color:#10b981;">Free</strong></span>
+            </div>
+            <div class="breakdown-row total-row">
+              <span>Total</span>
+              <span id="cart-total-text">₹0</span>
+            </div>
+          </div>
+
+          <button id="proceed-checkout-btn" class="checkout-btn">
+            Checkout <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Quick View Product Modal -->
+    <div id="quick-view-modal-wrapper" class="modal-wrapper hidden">
+      <div id="quick-view-backdrop" class="modal-backdrop"></div>
+      <div class="quick-view-modal-content">
+        <button id="close-quick-view-btn" class="modal-close-btn" aria-label="Close Modal"><i class="fa-solid fa-xmark"></i></button>
+        <div id="quick-view-body" class="quick-view-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Size Guide Modal -->
+    <div id="size-guide-modal-wrapper" class="modal-wrapper hidden">
+      <div id="size-guide-backdrop" class="modal-backdrop" onclick="closeSizeGuideModal()"></div>
+      <div class="size-guide-modal-content">
+        <button id="close-size-guide-btn" class="modal-close-btn" onclick="closeSizeGuideModal()" aria-label="Close Size Guide"><i class="fa-solid fa-xmark"></i></button>
+        <div class="size-guide-header">
+          <span class="size-guide-tag"><i class="fa-solid fa-ruler-combined"></i> XPORD FIT GUIDE</span>
+          <h2 class="size-guide-title">Garment Size & Measurement Chart</h2>
+          <p class="size-guide-desc">Measurements are in <strong>Inches (cm)</strong>. All XPORD garments feature our signature relaxed street silhouette.</p>
+        </div>
+
+        <div class="size-guide-unit-toggle">
+          <button id="unit-inches-btn" class="unit-btn active" onclick="switchSizeGuideUnit('in')">Inches (in)</button>
+          <button id="unit-cm-btn" class="unit-btn" onclick="switchSizeGuideUnit('cm')">Centimeters (cm)</button>
+        </div>
+
+        <div class="size-table-container">
+          <table class="size-guide-table" id="size-guide-table">
+            <thead>
+              <tr>
+                <th>Size</th>
+                <th>Chest / Bust</th>
+                <th>Body Length</th>
+                <th>Shoulder Width</th>
+                <th>Sleeve Length</th>
+                <th>Fit Advice</th>
+              </tr>
+            </thead>
+            <tbody id="size-guide-tbody">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="size-guide-tips">
+          <div class="tip-item">
+            <i class="fa-solid fa-circle-info"></i>
+            <div>
+              <strong>How to Measure Chest:</strong> Place the tape measure under your arms at the fullest part of your chest, wrap around your body until your fingers meet.
+            </div>
+          </div>
+          <div class="tip-item">
+            <i class="fa-solid fa-shirt"></i>
+            <div>
+              <strong>Silhouette Recommendation:</strong> If you want a tailored regular fit, order <strong>1 size smaller</strong>. For our signature oversized drop-shoulder look, select your <strong>true size</strong>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Checkout & Order Confirmation Modal -->
+    <div id="checkout-modal-wrapper" class="modal-wrapper hidden">
+      <div id="checkout-backdrop" class="modal-backdrop"></div>
+      <div class="checkout-modal-content">
+        <button id="close-checkout-btn" class="modal-close-btn" aria-label="Close Modal"><i class="fa-solid fa-xmark"></i></button>
+        <div id="checkout-modal-body">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+      <div class="container footer-grid">
+        <div class="footer-col brand-col">
+          <div class="brand-logo" style="gap: 0.6rem; margin-bottom: 0.8rem;">
+            <div class="brand-logo-mark" style="width: 34px; height: 34px;">
+              <svg class="brand-logo-svg" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M48 38 C48 20 72 20 72 38" stroke="url(#xpordGoldGradHdr)" stroke-width="5" stroke-linecap="round" fill="none"/>
+                <path d="M22 38 L44 38 L54 54 L36 54 Z" fill="url(#xpordGoldGradHdr)"/>
+                <path d="M42 38 L78 38 L72 70 L48 70 Z" fill="url(#xpordGoldGradHdr)"/>
+                <path d="M24 84 L42 84 L56 62 L42 62 Z" fill="url(#xpordGoldGradHdr)"/>
+                <path d="M68 62 L82 84 L100 84 L80 62 Z" fill="url(#xpordGoldGradHdr)"/>
+                <path d="M20 76 Q 50 68 80 44 L76 36 L108 26 L100 58 L92 50 Q 64 74 20 76 Z" fill="url(#xpordGoldGradHdr)"/>
+              </svg>
+            </div>
+            <div class="brand-text-group">
+              <span class="brand-title" style="font-size: 1.5rem;">xpord</span>
+              <span class="brand-sub" style="font-size: 0.52rem;">CLOTHING</span>
+            </div>
+          </div>
+          <p class="footer-desc">Crafting elevated modern streetwear and luxury staples for mindful connoisseurs of contemporary culture.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#" data-category="trending">Bestsellers</a></li>
+            <li><a href="#" data-category="new">New Drops</a></li>
+            <li><a href="#" data-category="shirts">Heavyweight Shirts</a></li>
+            <li><a href="#" data-category="trousers">Pleated Trousers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="#" onclick="openModal('shipping'); return false;">Shipping & Delivery</a></li>
+            <li><a href="#" onclick="openModal('returns'); return false;">Returns & Exchanges</a></li>
+            <li><a href="#" onclick="openModal('contact'); return false;">Contact Us</a></li>
+            <li><a href="#" onclick="openModal('privacy'); return false;">Privacy Policy</a></li>
+            <li><a href="#" onclick="openModal('terms'); return false;">Terms & Conditions</a></li>
+            <li><a href="#" onclick="openModal('about'); return false;">About Us</a></li>
+            <li><a href="#" onclick="openAdminPanel(); return false;" class="admin-portal-link"><i class="fa-solid fa-lock" style="font-size:0.75rem; opacity:0.7;"></i> Admin Portal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col newsletter-col">
+          <h4>Join The Xpord Club</h4>
+          <p>Subscribe to receive exclusive access to limited drops and private seasonal previews.</p>
+          <form id="newsletter-form" class="newsletter-form">
+            <input type="email" placeholder="Enter your email address" required />
+            <button type="submit" class="primary-btn">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>&copy; 2026 XPORD CLOTHING. All rights reserved. | <a href="#" onclick="openAdminPanel(); return false;" class="footer-admin-link"><i class="fa-solid fa-user-gear"></i> Admin Portal</a></p>
+        <div class="payment-badges">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-solid fa-qrcode"></i>
+          <i class="fa-solid fa-shield-cat"></i>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Legal Policy Pop-up Modal Overlay -->
+    <div id="legalModal" class="legal-modal-wrapper hidden">
+      <div id="legal-backdrop" class="legal-modal-backdrop" onclick="closeModal()"></div>
+      <div class="legal-modal-card">
+        <button id="close-legal-btn" class="legal-modal-close-btn" aria-label="Close Modal" onclick="closeModal()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div id="legal-modal-body" class="legal-modal-body">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Admin Security PIN Modal Overlay -->
+    <div id="adminPinModal" class="admin-modal-wrapper hidden">
+      <div id="admin-pin-backdrop" class="admin-modal-backdrop" onclick="closeAdminPinModal()"></div>
+      <div class="admin-modal-card" style="max-width: 440px; text-align: center;">
+        <button class="admin-modal-close-btn" aria-label="Close PIN Modal" onclick="closeAdminPinModal()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        
+        <div style="width:60px; height:60px; background-color:var(--bg-subtle); color:var(--text-primary); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin:0 auto 1rem; border:1px solid var(--border-medium);">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <span class="hero-tag" style="margin-bottom:0.5rem; display:inline-block">RESTRICTED ACCESS</span>
+        <h2 style="font-family:var(--font-display); font-size:1.4rem; font-weight:800; text-transform:uppercase; margin:0.3rem 0 0.5rem;">
+          Admin PIN Authentication
+        </h2>
+        <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1.25rem;">
+          Enter your 6-digit security PIN to access the product portal.
+        </p>
+
+        <form id="admin-pin-form" onsubmit="verifyAdminPin(event)">
+          <div style="margin-bottom:1rem;">
+            <input 
+              type="password" 
+              id="admin-pin-input" 
+              maxlength="6" 
+              pattern="[0-9]{6}" 
+              inputmode="numeric" 
+              required 
+              placeholder="••••••" 
+              autocomplete="off"
+              style="width:100%; max-width:240px; padding:0.8rem; text-align:center; font-size:1.5rem; letter-spacing:0.4em; font-family:monospace; background-color:var(--bg-subtle); border:1px solid var(--border-medium); border-radius:var(--radius-xs); color:var(--text-primary)"
+            />
+          </div>
+
+          <div id="pin-error-msg" style="font-size:0.8rem; color:#d9534f; font-weight:600; margin-bottom:1rem; min-height:1.2rem;"></div>
+
+          <button type="submit" class="primary-btn" style="width:100%;">
+            <i class="fa-solid fa-key"></i> Verify PIN
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Admin Product Addition Portal Modal Overlay -->
+    <div id="adminPanel" class="admin-modal-wrapper hidden">
+      <div id="admin-backdrop" class="admin-modal-backdrop" onclick="closeAdminPanel()"></div>
+      <div class="admin-modal-card">
+        <button id="close-admin-btn" class="admin-modal-close-btn" aria-label="Close Admin Portal" onclick="closeAdminPanel()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="admin-modal-header" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+          <div>
+            <span class="hero-tag"><i class="fa-solid fa-sliders"></i> XPORD MANAGEMENT</span>
+            <h2>Admin Product & Section Portal</h2>
+            <p>Add new apparel items directly to specific sections or view/manage your catalog.</p>
+          </div>
+
+          <!-- Admin Zoom & Viewport Toolbar for Mobile & Desktop -->
+          <div class="admin-zoom-toolbar" id="admin-zoom-controls">
+            <span class="admin-zoom-label"><i class="fa-solid fa-magnifying-glass-plus"></i> Zoom:</span>
+            <button type="button" class="admin-zoom-btn" onclick="changeAdminZoom(-1)" title="Zoom Out / Chhota karein" aria-label="Zoom Out">
+              <i class="fa-solid fa-minus"></i>
+            </button>
+            <span id="admin-zoom-level-text" class="admin-zoom-indicator" onclick="resetAdminZoom()" title="Click to reset zoom">100%</span>
+            <button type="button" class="admin-zoom-btn" onclick="changeAdminZoom(1)" title="Zoom In / Bada karein" aria-label="Zoom In">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <button type="button" class="admin-zoom-btn admin-fullscreen-btn" onclick="toggleAdminFullscreen()" title="Toggle Fullscreen / Expand Mode" aria-label="Fullscreen">
+              <i class="fa-solid fa-expand" id="admin-fs-icon"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Admin Navigation Tabs -->
+        <div class="admin-tabs">
+          <button id="admin-tab-ai-btn" class="admin-tab-btn" onclick="switchAdminTab('ai')" style="background:linear-gradient(135deg, rgba(99,102,241,0.12), rgba(59,130,246,0.12)); border:1.5px solid rgba(99,102,241,0.35); color:#4f46e5; font-weight:800;">
+            <i class="fa-solid fa-brain" style="color:#6366f1;"></i> AI Copilot & Auto-Importer
+          </button>
+          <button id="admin-tab-orders-btn" class="admin-tab-btn active" onclick="switchAdminTab('orders')">
+            <i class="fa-solid fa-receipt"></i> Live Orders (<span id="admin-orders-count-badge">0</span>)
+          </button>
+          <button id="admin-tab-add-btn" class="admin-tab-btn" onclick="switchAdminTab('add')">
+            <i class="fa-solid fa-plus-circle"></i> Add New Product
+          </button>
+          <button id="admin-tab-list-btn" class="admin-tab-btn" onclick="switchAdminTab('list')">
+            <i class="fa-solid fa-layer-group"></i> Catalog (<span id="admin-product-count">0</span>)
+          </button>
+          <button id="admin-tab-settings-btn" class="admin-tab-btn" onclick="switchAdminTab('settings')">
+            <i class="fa-solid fa-sliders"></i> Store Banners & Ticker
+          </button>
+          <button id="admin-tab-coupons-btn" class="admin-tab-btn" onclick="switchAdminTab('coupons')">
+            <i class="fa-solid fa-tags"></i> Promo Codes (<span id="admin-coupons-count">0</span>)
+          </button>
+        </div>
+
+        <!-- Tab 0: Real-Time Live Orders & Customer Details (Default) -->
+        <div id="admin-tab-orders-content" class="admin-tab-content">
+          <div id="admin-orders-summary-bar" class="admin-stats-grid">
+            <div class="admin-stat-card card-total">
+              <div class="admin-stat-top-row">
+                <div class="admin-stat-icon-wrapper total-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                <span class="admin-stat-label">Total Orders</span>
+              </div>
+              <strong id="admin-stat-total-orders" class="admin-stat-val">0</strong>
+            </div>
+            <div class="admin-stat-card card-revenue">
+              <div class="admin-stat-top-row">
+                <div class="admin-stat-icon-wrapper revenue-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                <span class="admin-stat-label">Total Revenue</span>
+              </div>
+              <strong id="admin-stat-total-revenue" class="admin-stat-val text-green">₹0</strong>
+            </div>
+            <div class="admin-stat-card card-cod">
+              <div class="admin-stat-top-row">
+                <div class="admin-stat-icon-wrapper cod-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                <span class="admin-stat-label">COD Orders</span>
+              </div>
+              <strong id="admin-stat-cod-orders" class="admin-stat-val text-amber">0</strong>
+            </div>
+            <div class="admin-stat-card card-prepaid">
+              <div class="admin-stat-top-row">
+                <div class="admin-stat-icon-wrapper prepaid-icon"><i class="fa-solid fa-credit-card"></i></div>
+                <span class="admin-stat-label">Prepaid Online</span>
+              </div>
+              <strong id="admin-stat-prepaid-orders" class="admin-stat-val text-indigo">0</strong>
+            </div>
+            <div class="admin-stat-card card-cancelled">
+              <div class="admin-stat-top-row">
+                <div class="admin-stat-icon-wrapper cancelled-icon"><i class="fa-solid fa-ban"></i></div>
+                <span class="admin-stat-label">Cancelled</span>
+              </div>
+              <strong id="admin-stat-cancelled-orders" class="admin-stat-val text-red">0</strong>
+            </div>
+          </div>
+
+          <div class="admin-orders-controls">
+            <div class="admin-search-input-wrapper">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input 
+                type="text" 
+                id="admin-orders-search" 
+                placeholder="Search by Order ID, Customer Name, Mobile, City, or Pincode..." 
+                oninput="renderAdminOrdersDashboard()"
+              />
+            </div>
+            <div class="admin-filter-group-row">
+              <select id="admin-orders-filter-payment" onchange="renderAdminOrdersDashboard()" class="admin-styled-select">
+                <option value="all">💳 All Payment Types</option>
+                <option value="cod">💵 Cash on Delivery (COD)</option>
+                <option value="prepaid">⚡ Online (Razorpay)</option>
+              </select>
+              <select id="admin-orders-filter-status" onchange="renderAdminOrdersDashboard()" class="admin-styled-select">
+                <option value="all">📦 All Statuses</option>
+                <option value="Order Placed">🟢 Order Placed</option>
+                <option value="Processing">🟡 Processing</option>
+                <option value="Shipped">🚚 Shipped</option>
+                <option value="Delivered">✅ Delivered</option>
+                <option value="Cancelled">❌ Cancelled</option>
+              </select>
+              <button 
+                type="button" 
+                onclick="clearAllOrdersFromAdmin()" 
+                class="admin-reset-orders-btn"
+                title="Reset/Delete all test orders"
+              >
+                <i class="fa-solid fa-trash-can"></i> Reset All Orders
+              </button>
+            </div>
+          </div>
+
+          <!-- Real-Time Orders List Container -->
+          <div id="admin-orders-table-container" class="admin-orders-scroll-list">
+            <!-- Dynamically populated via script.js -->
+          </div>
+        </div>
+        
+        <!-- Tab 1: Add New Product Form -->
+        <div id="admin-tab-add-content" class="admin-tab-content hidden">
+          <form id="add-product-form" class="admin-product-form" onsubmit="submitNewProductFromUI(event)">
+            <!-- Target Section Banner Box -->
+            <div id="admin-section-preview-box" class="admin-section-preview-box">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Target Section: <strong id="preview-section-name">Shirts Collection</strong> & Featured Tag: <strong id="preview-tag-name">NEW DROP</strong></span>
+            </div>
+
+            <div class="admin-form-grid">
+              <!-- 1. Product Name -->
+              <div class="admin-form-group full-width">
+                <label for="admin-title" style="font-weight:800; font-size:0.9rem;">
+                  <i class="fa-solid fa-tag" style="color:var(--accent-gold); margin-right:0.35rem;"></i> Product Title / Name <span class="required-star">*</span>
+                </label>
+                <input type="text" id="admin-title" required placeholder="e.g. Noir Silk Oversized Resort Shirt" style="font-size:0.95rem; font-weight:600; padding:0.65rem 0.85rem;" />
+              </div>
+
+              <!-- 2. Target Section / Category -->
+              <div class="admin-form-group">
+                <label for="admin-category" style="font-weight:800; font-size:0.88rem;">
+                  <i class="fa-solid fa-layer-group" style="color:var(--accent-gold); margin-right:0.35rem;"></i> Kis Section Me Rakhna Hai <span class="required-star">*</span>
+                </label>
+                <select id="admin-category" required onchange="updateSectionPreviewBox()">
+                  <option value="shirts" selected>👔 Shirts & Overshirts Section</option>
+                  <option value="trousers">👖 Trousers & Pants Section</option>
+                  <option value="jackets">🧥 Jackets & Blazers Section</option>
+                  <option value="oversized">👕 Oversized Tees & Polos</option>
+                  <option value="new">✨ New Arrivals Section</option>
+                  <option value="trending">🔥 Trending & Hot Drops</option>
+                </select>
+              </div>
+
+              <!-- 3. Featured Section Tag / Badge -->
+              <div class="admin-form-group">
+                <label for="admin-badge-preset" style="font-weight:800; font-size:0.88rem;">
+                  <i class="fa-solid fa-certificate" style="color:var(--accent-gold); margin-right:0.35rem;"></i> Section Badge / Tag <span class="required-star">*</span>
+                </label>
+                <select id="admin-badge-preset" required onchange="handleBadgePresetChange()">
+                  <option value="NEW ARRIVAL" selected>✨ New Drops (NEW ARRIVAL)</option>
+                  <option value="BESTSELLER">🔥 Bestseller (BESTSELLER)</option>
+                  <option value="TRENDING">⚡ Trending Now (TRENDING)</option>
+                  <option value="LIMITED EDITION">👑 Limited Edition</option>
+                  <option value="HOT DEAL">💥 Hot Deal / Sale</option>
+                  <option value="CUSTOM">🏷️ Custom Badge Tag...</option>
+                </select>
+              </div>
+
+              <div class="admin-form-group full-width" id="admin-custom-badge-wrapper" style="display:none;">
+                <label for="admin-badge" style="font-weight:700;">Custom Badge Text</label>
+                <input type="text" id="admin-badge" placeholder="e.g. EXCLUSIVE DROP" value="NEW ARRIVAL" oninput="updateSectionPreviewBox()" />
+              </div>
+
+              <!-- 4. Pricing & Discount (% OFF) Section -->
+              <div class="admin-form-group full-width" style="background:var(--bg-subtle); padding:1rem; border-radius:var(--radius-xs); border:1px solid var(--border-subtle);">
+                <label style="font-weight:800; font-size:0.9rem; display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem; color:var(--text-primary);">
+                  <span><i class="fa-solid fa-indian-rupee-sign" style="color:var(--accent-gold); margin-right:0.35rem;"></i> Pricing & Discount (% OFF) <span class="required-star">*</span></span>
+                  <span id="admin-price-summary-badge" style="font-size:0.75rem; font-weight:800; padding:0.25rem 0.65rem; background:#dcfce7; color:#15803d; border-radius:9999px; border:1px solid #86efac;">
+                    Live Price Preview
+                  </span>
+                </label>
+
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap:0.75rem; align-items:end;">
+                  <div>
+                    <label for="admin-price" style="font-size:0.8rem; font-weight:700; color:var(--text-secondary); margin-bottom:0.25rem; display:block;">
+                      Selling Price (₹) <span class="required-star">*</span>
+                    </label>
+                    <input type="number" id="admin-price" min="1" required placeholder="e.g. 1999" oninput="handlePriceCalculation('price')" style="width:100%; font-weight:700; font-size:0.95rem; padding:0.5rem 0.7rem;" />
+                  </div>
+
+                  <div>
+                    <label for="admin-discount-percent" style="font-size:0.8rem; font-weight:700; color:var(--text-secondary); margin-bottom:0.25rem; display:block;">
+                      Discount (% OFF)
+                    </label>
+                    <div style="display:flex; align-items:center;">
+                      <input type="number" id="admin-discount-percent" min="0" max="95" value="25" placeholder="e.g. 25" oninput="handlePriceCalculation('discount')" style="width:100%; font-weight:700; font-size:0.95rem; padding:0.5rem 0.7rem;" />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="admin-original-price" style="font-size:0.8rem; font-weight:700; color:var(--text-secondary); margin-bottom:0.25rem; display:block;">
+                      Original MRP (₹)
+                    </label>
+                    <input type="number" id="admin-original-price" min="1" placeholder="e.g. 2665" oninput="handlePriceCalculation('original')" style="width:100%; font-weight:600; font-size:0.95rem; padding:0.5rem 0.7rem; color:var(--text-muted);" />
+                  </div>
+                </div>
+
+                <!-- Quick Discount Preset Chips -->
+                <div style="display:flex; align-items:center; gap:0.4rem; margin-top:0.6rem; flex-wrap:wrap;">
+                  <span style="font-size:0.75rem; color:var(--text-muted); font-weight:700;">Quick % Off:</span>
+                  <button type="button" onclick="setDiscountPreset(0)" style="padding:0.2rem 0.5rem; font-size:0.75rem; font-weight:700; background:var(--bg-card); border:1px solid var(--border-medium); border-radius:4px; cursor:pointer;">0% (No Off)</button>
+                  <button type="button" onclick="setDiscountPreset(15)" style="padding:0.2rem 0.5rem; font-size:0.75rem; font-weight:700; background:var(--bg-card); border:1px solid var(--border-medium); border-radius:4px; cursor:pointer;">15% OFF</button>
+                  <button type="button" onclick="setDiscountPreset(20)" style="padding:0.2rem 0.5rem; font-size:0.75rem; font-weight:700; background:var(--bg-card); border:1px solid var(--border-medium); border-radius:4px; cursor:pointer;">20% OFF</button>
+                  <button type="button" onclick="setDiscountPreset(25)" style="padding:0.2rem 0.5rem; font-size:0.75rem; font-weight:700; background:var(--bg-card); border:1px solid var(--border-medium); border-radius:4px; cursor:pointer;">25% OFF</button>
+                  <button type="button" onclick="setDiscountPreset(30)" style="padding:0.2rem 0.5rem; font-size:0.75rem; font-weight:700; background:var(--bg-card); border:1px solid var(--border-medium); border-radius:4px; cursor:pointer;">30% OFF</button>
+                  <button type="button" onclick="setDiscountPreset(40)" style="padding:0.2rem 0.5rem; font-size:0.75rem; font-weight:700; background:var(--bg-card); border:1px solid var(--border-medium); border-radius:4px; cursor:pointer;">40% OFF</button>
+                  <button type="button" onclick="setDiscountPreset(50)" style="padding:0.2rem 0.5rem; font-size:0.75rem; font-weight:700; background:var(--bg-card); border:1px solid var(--border-medium); border-radius:4px; cursor:pointer;">50% OFF</button>
+                </div>
+              </div>
+
+              <!-- 5. Available Sizes Selector (Kon Kon Sa Size Available Hai) -->
+              <div class="admin-form-group full-width" style="background:var(--bg-subtle); padding:1rem; border-radius:var(--radius-xs); border:1px solid var(--border-subtle);">
+                <label style="font-weight:800; font-size:0.9rem; display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem; color:var(--text-primary);">
+                  <span><i class="fa-solid fa-ruler" style="color:var(--accent-gold); margin-right:0.35rem;"></i> Available Sizes (Jo Size Available Ho Select Karein) <span class="required-star">*</span></span>
+                  <span style="font-size:0.75rem; color:var(--text-muted);">Click to toggle S, M, L, XL...</span>
+                </label>
+
+                <div id="admin-sizes-container" style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">
+                  <!-- Size Toggle Chips -->
+                  <button type="button" class="admin-size-chip active" data-size="XS" onclick="toggleAdminSize('XS')">XS</button>
+                  <button type="button" class="admin-size-chip active" data-size="S" onclick="toggleAdminSize('S')">S</button>
+                  <button type="button" class="admin-size-chip active" data-size="M" onclick="toggleAdminSize('M')">M</button>
+                  <button type="button" class="admin-size-chip active" data-size="L" onclick="toggleAdminSize('L')">L</button>
+                  <button type="button" class="admin-size-chip active" data-size="XL" onclick="toggleAdminSize('XL')">XL</button>
+                  <button type="button" class="admin-size-chip active" data-size="XXL" onclick="toggleAdminSize('XXL')">XXL</button>
+                  <button type="button" class="admin-size-chip" data-size="3XL" onclick="toggleAdminSize('3XL')">3XL</button>
+                  <button type="button" class="admin-size-chip" data-size="Free Size" onclick="toggleAdminSize('Free Size')">Free Size</button>
+                </div>
+
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
+                  <div style="display:flex; gap:0.4rem; flex-wrap:wrap;">
+                    <button type="button" onclick="setStandardSizes('standard')" style="padding:0.25rem 0.6rem; font-size:0.75rem; font-weight:700; background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xs); cursor:pointer;">
+                      Standard (S, M, L, XL, XXL)
+                    </button>
+                    <button type="button" onclick="setStandardSizes('all')" style="padding:0.25rem 0.6rem; font-size:0.75rem; font-weight:700; background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xs); cursor:pointer;">
+                      Select All
+                    </button>
+                    <button type="button" onclick="setStandardSizes('clear')" style="padding:0.25rem 0.6rem; font-size:0.75rem; font-weight:700; background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xs); cursor:pointer;">
+                      Clear
+                    </button>
+                  </div>
+                  
+                  <div style="display:flex; align-items:center; gap:0.35rem;">
+                    <input type="text" id="admin-custom-size-input" placeholder="Add custom size (e.g. 32, 34)" style="padding:0.3rem 0.5rem; font-size:0.78rem; width:170px;" />
+                    <button type="button" onclick="addCustomAdminSize()" style="padding:0.3rem 0.6rem; background:var(--accent-gold); color:#000; font-weight:800; font-size:0.78rem; border-radius:var(--radius-xs); border:none; cursor:pointer;">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 6. Fabric, Fit & Occasion -->
+              <div class="admin-form-group">
+                <label for="admin-fabric" style="font-weight:800; font-size:0.88rem;">
+                  <i class="fa-solid fa-shirt" style="color:var(--accent-gold); margin-right:0.35rem;"></i> Fabric / Material <span class="required-star">*</span>
+                </label>
+                <select id="admin-fabric" required>
+                  <option value="Cotton" selected>Organic Cotton</option>
+                  <option value="Heavy Cotton">Heavy Cotton (240+ GSM)</option>
+                  <option value="Linen">Pure French Linen</option>
+                  <option value="Satin">Italian Satin Silk</option>
+                  <option value="Velvet">Royal Velvet</option>
+                  <option value="Flannel">Brushed Flannel</option>
+                  <option value="Viscose">Luxe Viscose</option>
+                  <option value="Denim">Japanese Rigid Denim</option>
+                  <option value="Corduroy">Ribbed Corduroy</option>
+                  <option value="Silk Blend">Mulberry Silk Blend</option>
+                </select>
+              </div>
+
+              <div class="admin-form-group">
+                <label for="admin-fit" style="font-weight:800; font-size:0.88rem;">
+                  <i class="fa-solid fa-scissors" style="color:var(--accent-gold); margin-right:0.35rem;"></i> Fit / Cut <span class="required-star">*</span>
+                </label>
+                <select id="admin-fit" required>
+                  <option value="Oversized" selected>Oversized Drop-Shoulder</option>
+                  <option value="Boxy Fit">Boxy Modern Fit</option>
+                  <option value="Relaxed">Relaxed Silhouette</option>
+                  <option value="Tailored">Tailored Precision</option>
+                  <option value="Slim Fit">Slim Contemporary</option>
+                  <option value="Regular">Classic Regular</option>
+                </select>
+              </div>
+
+              <div class="admin-form-group full-width">
+                <label for="admin-occasion" style="font-weight:800; font-size:0.88rem;">
+                  <i class="fa-solid fa-champagne-glasses" style="color:var(--accent-gold); margin-right:0.35rem;"></i> Occasion / Style Category <span class="required-star">*</span>
+                </label>
+                <select id="admin-occasion" required>
+                  <option value="Party" selected>Party / Clubwear / Evening</option>
+                  <option value="Casual">Casual Daily / Streetwear</option>
+                  <option value="Resort">Resort & Summer Vacation</option>
+                  <option value="Formal">Formal & Business Luxury</option>
+                  <option value="Lounge">Lounge & Effortless Comfort</option>
+                </select>
+              </div>
+
+              <!-- Primary Image: Direct File Upload & URL -->
+              <div class="admin-form-group full-width" style="background:var(--bg-subtle); padding:1rem; border-radius:var(--radius-xs); border:1px solid var(--border-subtle);">
+                <label style="font-weight:800; font-size:0.9rem; display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem; color:var(--text-primary);">
+                  <span><i class="fa-solid fa-camera" style="color:var(--accent-gold); margin-right:0.35rem;"></i> Primary Product Image <span class="required-star">*</span></span>
+                  <span style="font-size:0.75rem; color:var(--accent-gold); font-weight:700;">From Gallery / Camera / Device</span>
+                </label>
+                
+                <!-- Native Visible File Button & Drop Area -->
+                <div 
+                  id="admin-primary-box"
+                  style="border:2px dashed var(--accent-gold); border-radius:var(--radius-xs); background:var(--bg-card); padding:1rem; text-align:center; transition:all 0.25s ease;"
+                >
+                  <!-- Selected Image Preview Area -->
+                  <div id="admin-primary-preview-container" style="display:none; margin-bottom:0.75rem;">
+                    <div style="display:inline-flex; align-items:center; gap:0.4rem; padding:0.35rem 0.85rem; background:#dcfce7; color:#15803d; border-radius:9999px; font-size:0.82rem; font-weight:800; margin-bottom:0.6rem; border:1px solid #86efac;">
+                      <i class="fa-solid fa-circle-check"></i> <span id="admin-primary-file-info">Photo Selected</span>
+                    </div>
+                    <div style="display:flex; justify-content:center; align-items:center; margin-bottom:0.6rem;">
+                      <img id="admin-primary-preview-img" src="" alt="Primary Preview" style="max-height:180px; max-width:200px; object-fit:cover; border-radius:8px; border:2px solid #22c55e; box-shadow:0 4px 12px rgba(0,0,0,0.12);" />
+                    </div>
+                    <button type="button" onclick="clearProductImage('primary')" style="padding:0.4rem 0.8rem; background:#fee2e2; color:#b91c1c; border:1px solid #fca5a5; border-radius:var(--radius-xs); font-size:0.78rem; font-weight:700; cursor:pointer;">
+                      <i class="fa-solid fa-trash-can"></i> Remove Photo
+                    </button>
+                  </div>
+
+                  <!-- Direct File Selector -->
+                  <div id="admin-primary-placeholder-ui">
+                    <i class="fa-solid fa-cloud-arrow-up" style="font-size:2rem; color:var(--accent-gold); margin-bottom:0.4rem; display:block;"></i>
+                    <div style="font-size:0.9rem; font-weight:800; color:var(--text-primary); margin-bottom:0.4rem;">Select Image from Phone / Computer</div>
+                    
+                    <input 
+                      type="file" 
+                      id="admin-primary-file" 
+                      accept="image/*"
+                      onchange="handleProductImageFileUpload(event, 'primary')" 
+                      style="display:inline-block; font-size:0.85rem; padding:0.4rem; border:1px solid var(--border-medium); border-radius:var(--radius-xs); background:var(--bg-subtle); cursor:pointer; max-width:100%;"
+                    />
+                    <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.35rem;">Choose from Gallery, Camera, or Files (JPG, PNG, WEBP)</div>
+                  </div>
+                </div>
+
+                <!-- Fallback URL input -->
+                <div style="display:flex; align-items:center; gap:0.5rem; margin-top:0.6rem;">
+                  <span style="font-size:0.75rem; color:var(--text-muted); font-weight:700; white-space:nowrap;">Or Paste URL:</span>
+                  <input 
+                    type="text" 
+                    id="admin-primary-img" 
+                    placeholder="https://images.unsplash.com/... (auto-filled if file uploaded)" 
+                    oninput="handleProductImageUrlInput('primary')"
+                    style="flex:1; font-size:0.8rem; padding:0.45rem 0.65rem; background:var(--bg-card);"
+                  />
+                </div>
+              </div>
+
+              <!-- Multiple Alternative & Gallery Images: Direct Multi-File Upload & Multiple URLs -->
+              <div class="admin-form-group full-width" style="background:#f8fafc; padding:1.15rem; border-radius:10px; border:1.5px solid #e2e8f0; margin-top:0.5rem; box-shadow:0 1px 3px rgba(0,0,0,0.03);">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.5rem;">
+                  <div>
+                    <label style="font-weight:900; font-size:0.92rem; color:#0f172a; display:flex; align-items:center; gap:0.4rem; margin:0;">
+                      <i class="fa-solid fa-images" style="color:#d97706; font-size:1.05rem;"></i> Multiple Alternative & Gallery Photos (Bahut Saare Images)
+                    </label>
+                    <span style="font-size:0.78rem; color:#64748b; font-weight:600; display:block; margin-top:0.2rem;">
+                      Add back-angle, close-up details, model shots, side poses & fabric textures for customer gallery
+                    </span>
+                  </div>
+
+                  <span id="admin-alt-count-badge" style="font-size:0.75rem; font-weight:800; padding:0.25rem 0.65rem; background:#f1f5f9; color:#475569; border-radius:9999px; border:1px solid #cbd5e1;">
+                    0 Alternative Images Added
+                  </span>
+                </div>
+
+                <!-- 1. Multi-File Upload Drop Area -->
+                <div 
+                  id="admin-alt-box"
+                  style="border:2px dashed #94a3b8; border-radius:8px; background:#ffffff; padding:1rem; text-align:center; transition:all 0.25s ease;"
+                >
+                  <i class="fa-solid fa-photo-film" style="font-size:1.8rem; color:#d97706; margin-bottom:0.35rem; display:block;"></i>
+                  <div style="font-size:0.88rem; font-weight:800; color:#0f172a; margin-bottom:0.35rem;">
+                    Upload Multiple Photos from Device (Ek sath multiple images select karein)
+                  </div>
+                  
+                  <input 
+                    type="file" 
+                    id="admin-alt-files" 
+                    multiple 
+                    accept="image/*"
+                    onchange="handleMultipleAltImagesUpload(event)" 
+                    style="display:inline-block; font-size:0.84rem; font-weight:600; padding:0.45rem 0.75rem; border:1.5px solid #cbd5e1; border-radius:6px; background:#f8fafc; cursor:pointer; max-width:100%; color:#334155;"
+                  />
+                  <div style="font-size:0.75rem; color:#64748b; margin-top:0.35rem;">
+                    You can select 1, 2, 5, 10 or more images simultaneously (JPG, PNG, WEBP)
+                  </div>
+                </div>
+
+                <!-- 2. Or Paste Image URLs (Single or Multiple Comma-Separated) -->
+                <div style="display:flex; align-items:center; gap:0.5rem; margin-top:0.75rem; flex-wrap:wrap;">
+                  <span style="font-size:0.78rem; color:#475569; font-weight:800; white-space:nowrap;">
+                    <i class="fa-solid fa-link" style="color:#64748b;"></i> Or Add URL:
+                  </span>
+                  <input 
+                    type="text" 
+                    id="admin-alt-url-input" 
+                    placeholder="Paste image URL (or multiple comma-separated URLs)" 
+                    style="flex:1; min-width:200px; font-size:0.82rem; padding:0.5rem 0.75rem; background:#ffffff; border:1.5px solid #cbd5e1; border-radius:6px; color:#0f172a;"
+                    onkeydown="if(event.key === 'Enter'){ event.preventDefault(); addAltImageUrlFromInput(); }"
+                  />
+                  <button 
+                    type="button" 
+                    onclick="addAltImageUrlFromInput()" 
+                    style="padding:0.5rem 0.9rem; background:#0f172a; color:#ffffff; font-weight:800; font-size:0.8rem; border-radius:6px; border:none; cursor:pointer; display:flex; align-items:center; gap:0.35rem; transition:background 0.2s;"
+                  >
+                    <i class="fa-solid fa-plus"></i> Add Image
+                  </button>
+                </div>
+
+                <!-- 3. Dynamic Alternative Images Gallery Preview Cards Grid -->
+                <div id="admin-alt-gallery-container" style="display:none; margin-top:1rem; padding-top:0.85rem; border-top:1.5px dashed #cbd5e1;">
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem;">
+                    <span style="font-size:0.8rem; font-weight:800; color:#0f172a; text-transform:uppercase; letter-spacing:0.04em;">
+                      <i class="fa-solid fa-circle-check" style="color:#16a34a;"></i> Product Gallery Queue:
+                    </span>
+                    <button 
+                      type="button" 
+                      onclick="clearAllAltImages()" 
+                      style="font-size:0.75rem; font-weight:800; color:#dc2626; background:none; border:none; cursor:pointer; text-decoration:underline;"
+                    >
+                      Clear All Alternate Photos
+                    </button>
+                  </div>
+
+                  <div id="admin-alt-images-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(110px, 1fr)); gap:0.65rem;">
+                    <!-- Dynamically rendered via script.js -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="admin-form-group full-width" style="margin-top:0.2rem;">
+                <label class="custom-checkbox" style="font-size:0.85rem; color:var(--text-primary);">
+                  <input type="checkbox" id="admin-auto-switch-view" checked />
+                  <span class="checkmark"></span>
+                  <span class="label-text">Auto-switch homepage view to this section after adding</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="admin-form-actions">
+              <button type="submit" class="primary-btn full-width-btn">
+                <i class="fa-solid fa-plus"></i> Add Product To Selected Section
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Tab 2: Catalog Sections & Existing Products List -->
+        <div id="admin-tab-list-content" class="admin-tab-content hidden">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; gap:0.5rem; flex-wrap:wrap;">
+            <input 
+              type="text" 
+              id="admin-search-catalog" 
+              placeholder="Search products or filter by section..." 
+              oninput="renderAdminCatalogList()"
+              style="flex:1; padding:0.6rem 0.8rem; background-color:var(--bg-subtle); border:1px solid var(--border-medium); border-radius:var(--radius-xs); color:var(--text-primary); font-size:0.85rem;"
+            />
+            <button type="button" class="secondary-btn-outline" style="width:auto; padding:0.6rem 1rem;" onclick="resetProductsToDefault()">
+              <i class="fa-solid fa-rotate-left"></i> Reset Baseline Catalog
+            </button>
+          </div>
+
+          <div id="admin-catalog-items-container" class="admin-catalog-list">
+            <!-- Dynamically populated via script.js -->
+          </div>
+        </div>
+
+        <!-- Tab 3: Store Banners & Ticker Announcement Settings -->
+        <div id="admin-tab-settings-content" class="admin-tab-content hidden">
+          <form id="admin-settings-form" class="admin-product-form" onsubmit="saveStoreSettingsUI(event)">
+            <div class="admin-form-grid">
+              <div class="admin-form-group full-width">
+                <label for="admin-ticker-msg">Top Announcement Ticker Message</label>
+                <input type="text" id="admin-ticker-msg" required placeholder="COMPLIMENTARY EXPRESS SHIPPING ON ORDERS ABOVE ₹1,999..." />
+              </div>
+
+              <div class="admin-form-group full-width">
+                <label for="admin-hero-title">Homepage Hero Headline</label>
+                <input type="text" id="admin-hero-title" required placeholder="REDEFINING MODERN SILHOUETTES" />
+              </div>
+
+              <div class="admin-form-group full-width">
+                <label for="admin-hero-subtitle">Homepage Hero Subtitle</label>
+                <textarea id="admin-hero-subtitle" rows="2" style="width:100%; padding:0.6rem; background:var(--bg-subtle); border:1px solid var(--border-medium); color:var(--text-primary); font-size:0.85rem;" placeholder="Heavyweight micro-velvet..."></textarea>
+              </div>
+
+              <div class="admin-form-group">
+                <label for="admin-promo-code">Promo Coupon Code</label>
+                <input type="text" id="admin-promo-code" required placeholder="XPORD20" style="text-transform:uppercase;" />
+              </div>
+
+              <div class="admin-form-group">
+                <label for="admin-promo-discount">Promo Discount (%)</label>
+                <input type="number" id="admin-promo-discount" min="1" max="90" required placeholder="20" />
+              </div>
+            </div>
+
+            <div class="admin-form-actions">
+              <button type="submit" class="primary-btn full-width-btn">
+                <i class="fa-solid fa-floppy-disk"></i> Save Store Banners & Settings
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Tab 4: Promo Codes & Coupon Management -->
+        <div id="admin-tab-coupons-content" class="admin-tab-content hidden">
+          <!-- In-UI Success / Error Alert Banner for Admin Operations -->
+          <div id="admin-coupon-alert-box" class="hidden" style="margin-bottom:1.25rem; padding:0.9rem 1.25rem; border-radius:var(--radius-xs); display:flex; align-items:center; justify-content:space-between; animation:popIn 0.3s ease;">
+            <div style="display:flex; align-items:center; gap:0.65rem;">
+              <i id="admin-coupon-alert-icon" class="fa-solid fa-circle-check" style="font-size:1.3rem;"></i>
+              <div>
+                <strong id="admin-coupon-alert-title" style="display:block; font-size:0.92rem; font-weight:800;"></strong>
+                <span id="admin-coupon-alert-msg" style="font-size:0.8rem; opacity:0.9;"></span>
+              </div>
+            </div>
+            <button type="button" onclick="hideAdminCouponAlert()" style="background:none; border:none; color:inherit; font-size:1.1rem; cursor:pointer; padding:0.2rem 0.5rem;"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+
+          <div style="margin-bottom:1.5rem; background:var(--bg-subtle); border:1px solid var(--border-medium); border-radius:var(--radius-xs); padding:1.25rem;">
+            <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
+              <i class="fa-solid fa-plus-circle" style="color:var(--accent-gold); font-size:1.1rem;"></i>
+              <h3 style="margin:0; font-family:var(--font-display); font-size:1.1rem; font-weight:800; text-transform:uppercase;">Create New Promo Code</h3>
+            </div>
+            <p style="font-size:0.82rem; color:var(--text-secondary); margin-bottom:1rem;">Add a promo discount code with terms & conditions that customers can view and apply in their cart.</p>
+
+            <form id="admin-add-coupon-form" onsubmit="submitNewCouponFromAdmin(event)">
+              <div class="admin-form-grid">
+                <div class="admin-form-group">
+                  <label for="admin-new-coupon-code" style="font-weight:800; font-size:0.85rem;">
+                    <i class="fa-solid fa-tag" style="color:var(--accent-gold);"></i> Promo Code <span style="color:red;">*</span>
+                  </label>
+                  <input type="text" id="admin-new-coupon-code" required placeholder="e.g. SUMMER25" style="text-transform:uppercase; font-weight:800; letter-spacing:0.05em;" />
+                </div>
+
+                <div class="admin-form-group">
+                  <label for="admin-new-coupon-discount" style="font-weight:800; font-size:0.85rem;">
+                    <i class="fa-solid fa-percent" style="color:var(--accent-gold);"></i> Discount Percentage (%) <span style="color:red;">*</span>
+                  </label>
+                  <input type="number" id="admin-new-coupon-discount" min="1" max="90" required placeholder="e.g. 25" />
+                </div>
+
+                <div class="admin-form-group">
+                  <label for="admin-new-coupon-min-order" style="font-weight:800; font-size:0.85rem;">
+                    <i class="fa-solid fa-indian-rupee-sign" style="color:var(--accent-gold);"></i> Min. Order Value (₹) <span style="color:red;">*</span>
+                  </label>
+                  <input type="number" id="admin-new-coupon-min-order" min="0" required placeholder="e.g. 1499 (0 for no minimum)" value="999" />
+                </div>
+
+                <div class="admin-form-group">
+                  <label for="admin-new-coupon-max-discount" style="font-weight:800; font-size:0.85rem;">
+                    <i class="fa-solid fa-shield-halved" style="color:var(--accent-gold);"></i> Max Discount Cap (₹) (Optional)
+                  </label>
+                  <input type="number" id="admin-new-coupon-max-discount" min="0" placeholder="e.g. 1000 (leave 0 for no limit)" value="0" />
+                </div>
+
+                <div class="admin-form-group full-width">
+                  <label for="admin-new-coupon-desc" style="font-weight:800; font-size:0.85rem;">
+                    <i class="fa-solid fa-pen-fancy" style="color:var(--accent-gold);"></i> Short Title / Description (Optional)
+                  </label>
+                  <input type="text" id="admin-new-coupon-desc" placeholder="e.g. 25% OFF on Summer Drops" />
+                </div>
+
+                <div class="admin-form-group full-width">
+                  <label for="admin-new-coupon-terms" style="font-weight:800; font-size:0.85rem;">
+                    <i class="fa-solid fa-file-contract" style="color:var(--accent-gold);"></i> Terms & Conditions Details (Optional)
+                  </label>
+                  <textarea id="admin-new-coupon-terms" rows="2" style="width:100%; padding:0.6rem; background:var(--bg-card); border:1px solid var(--border-medium); color:var(--text-primary); font-size:0.85rem; border-radius:var(--radius-xs);" placeholder="e.g. Valid on all orders above ₹1,499. Cannot be combined with other offers."></textarea>
+                </div>
+              </div>
+
+              <div style="margin-top:1rem; display:flex; justify-content:flex-end;">
+                <button type="submit" class="primary-btn" style="padding:0.75rem 1.5rem; font-size:0.85rem;">
+                  <i class="fa-solid fa-plus"></i> Create & Publish Promo Code
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Existing Promo Codes List in Admin -->
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
+              <h3 style="margin:0; font-family:var(--font-display); font-size:1.1rem; font-weight:800; text-transform:uppercase;">
+                Active Promo Codes (<span id="admin-active-coupons-count">0</span>)
+              </h3>
+              <button type="button" class="secondary-btn-outline" style="width:auto; padding:0.4rem 0.8rem; font-size:0.78rem;" onclick="resetCouponsToDefault()">
+                <i class="fa-solid fa-rotate-left"></i> Reset Baseline Promo Codes
+              </button>
+            </div>
+            <div id="admin-coupons-list-container" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:1rem;">
+              <!-- Dynamically populated via script.js -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 5: AI Copilot & Product Auto-Importer Workspace -->
+        <div id="admin-tab-ai-content" class="admin-tab-content hidden">
+          <div class="xpord-ai-embed-card">
+            <!-- Header bar with tab switchers -->
+            <div class="xpord-ai-panel-header">
+              <div class="xpord-ai-header-left">
+                <div class="xpord-ai-badge-group">
+                  <span class="xpord-ai-system-tag"><i class="fa-solid fa-microchip"></i> XPORD CORE SYSTEM INTELLIGENCE</span>
+                  <span class="xpord-ai-status-pill"><span class="xpord-ai-live-dot"></span> Autonomous Operational Agent • Online</span>
+                </div>
+                <h3 class="xpord-ai-panel-heading">Administrative Cognitive Command Center</h3>
+              </div>
+
+              <!-- Section Switcher Tabs -->
+              <div class="xpord-ai-tab-switch">
+                <button 
+                  type="button" 
+                  id="xpord-ai-tab-btn-importer" 
+                  class="xpord-ai-switch-btn active" 
+                  onclick="switchXpordAiTab('importer')"
+                >
+                  <i class="fa-solid fa-wand-magic-sparkles"></i> Section A: AI Auto-Importer
+                </button>
+                <button 
+                  type="button" 
+                  id="xpord-ai-tab-btn-chat" 
+                  class="xpord-ai-switch-btn" 
+                  onclick="switchXpordAiTab('chat')"
+                >
+                  <i class="fa-solid fa-terminal"></i> Section B: Cognitive Admin Chat
+                </button>
+              </div>
+            </div>
+
+            <!-- Panel Body -->
+            <div class="xpord-ai-panel-body">
+              <!-- ================================================================
+                   SECTION A: AI Product Auto-Importer
+                   ================================================================ -->
+              <div id="xpord-ai-tab-importer" class="xpord-ai-tab-content">
+                <div class="xpord-ai-banner">
+                  <div class="xpord-ai-banner-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+                  <div class="xpord-ai-banner-text">
+                    <strong>Autonomous E-Commerce Scraping & Ingestion Agent</strong>
+                    <p>Drop any apparel link from Flipkart, Amazon, Cahoot, Myntra, or Zara. The AI automatically extracts Title, Fabric GSM, Fit, Occasion, and Ultra High-Res Product Visuals.</p>
+                  </div>
+                </div>
+
+                <!-- Direct URL Submission Bar -->
+                <div class="xpord-ai-submission-bar">
+                  <div class="xpord-ai-url-input-wrap">
+                    <i class="fa-solid fa-link"></i>
+                    <input 
+                      type="url" 
+                      id="xpord-ai-product-url" 
+                      placeholder="Paste clothing link (e.g. https://www.flipkart.com/... or https://www.amazon.in/...)" 
+                      autocomplete="off"
+                    />
+                    <button type="button" class="xpord-ai-paste-btn" onclick="pasteClipboardToXpordAi()" title="Paste from clipboard">
+                      <i class="fa-regular fa-clipboard"></i> Paste
+                    </button>
+                  </div>
+                  <button type="button" id="xpord-ai-analyze-btn" class="xpord-ai-action-btn" onclick="analyzeProductUrlWithAI()">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Analyze Link
+                  </button>
+                </div>
+
+                <!-- Quick Demo URLs -->
+                <div class="xpord-ai-quick-samples">
+                  <span class="xpord-ai-samples-label">Quick Sample Links:</span>
+                  <button type="button" onclick="loadXpordAiSample('flipkart')"><i class="fa-solid fa-bag-shopping"></i> Flipkart Heavyweight Tee</button>
+                  <button type="button" onclick="loadXpordAiSample('amazon')"><i class="fa-brands fa-amazon"></i> Amazon Linen Shirt</button>
+                  <button type="button" onclick="loadXpordAiSample('myntra')"><i class="fa-solid fa-shirt"></i> Myntra Denim Jacket</button>
+                </div>
+
+                <!-- Analysis Loading Indicator -->
+                <div id="xpord-ai-importer-loading" class="xpord-ai-loading-state hidden">
+                  <div class="xpord-ai-spinner-box">
+                    <div class="xpord-ai-spinner"></div>
+                    <div class="xpord-ai-radar"></div>
+                  </div>
+                  <div class="xpord-ai-loading-msg">
+                    <strong id="xpord-ai-loading-title">Autonomous Scraper Ingestion in Progress...</strong>
+                    <span id="xpord-ai-loading-step">Parsing DOM structures, fabric specifications & isolating high-res visuals...</span>
+                  </div>
+                </div>
+
+                <!-- Hidden Metadata Review Form -->
+                <div id="xpord-ai-review-form" class="xpord-ai-review-box hidden">
+                  <div class="xpord-ai-review-header">
+                    <div>
+                      <span class="xpord-ai-badge-green"><i class="fa-solid fa-circle-check"></i> Extraction Complete</span>
+                      <h4>AI Metadata Verification & Price Override</h4>
+                    </div>
+                    <button type="button" class="xpord-ai-btn-ghost" onclick="resetXpordAiReviewForm()">
+                      <i class="fa-solid fa-rotate-left"></i> Clear
+                    </button>
+                  </div>
+
+                  <div class="xpord-ai-review-grid">
+                    <!-- Visual Preview Column -->
+                    <div class="xpord-ai-preview-col">
+                      <div class="xpord-ai-img-frame">
+                        <img id="xpord-ai-preview-img" src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=800&auto=format&fit=crop" alt="AI Extracted Apparel" />
+                        <span id="xpord-ai-platform-tag" class="xpord-ai-source-tag">E-Commerce</span>
+                      </div>
+                      <div class="xpord-ai-field-group">
+                        <label>Extracted High-Res Image URL</label>
+                        <input type="url" id="xpord-ai-field-img" oninput="updateXpordAiImagePreview(this.value)" />
+                      </div>
+                    </div>
+
+                    <!-- Form Fields Column -->
+                    <div class="xpord-ai-fields-col">
+                      <div class="xpord-ai-field-group full">
+                        <label>Product Title</label>
+                        <input type="text" id="xpord-ai-field-title" placeholder="Extracted Title" />
+                      </div>
+
+                      <div class="xpord-ai-fields-row">
+                        <div class="xpord-ai-field-group">
+                          <label>Fabric Type</label>
+                          <input type="text" id="xpord-ai-field-fabric" placeholder="e.g. 100% Cotton" />
+                        </div>
+                        <div class="xpord-ai-field-group">
+                          <label>Fit Type</label>
+                          <input type="text" id="xpord-ai-field-fit" placeholder="e.g. Oversized Boxy" />
+                        </div>
+                      </div>
+
+                      <div class="xpord-ai-fields-row">
+                        <div class="xpord-ai-field-group">
+                          <label>Occasion</label>
+                          <input type="text" id="xpord-ai-field-occasion" placeholder="e.g. Streetwear / Casual" />
+                        </div>
+                        <div class="xpord-ai-field-group">
+                          <label>Store Category</label>
+                          <select id="xpord-ai-field-category">
+                            <option value="shirts">Shirts</option>
+                            <option value="oversized">Oversized Fits</option>
+                            <option value="tshirts">T-Shirts</option>
+                            <option value="hoodies">Hoodies & Sweatshirts</option>
+                            <option value="jackets">Jackets & Coats</option>
+                            <option value="pants">Trousers & Pants</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="xpord-ai-field-group full">
+                        <label>Product Description</label>
+                        <textarea id="xpord-ai-field-desc" rows="2" placeholder="Extracted product description..."></textarea>
+                      </div>
+
+                      <!-- Mandatory Admin Override Section: 3 Blank Input Boxes -->
+                      <div class="xpord-ai-admin-overrides">
+                        <div class="xpord-ai-override-title">
+                          <i class="fa-solid fa-pen-ruler"></i> Mandatory Admin Pricing & Badge Overrides:
+                        </div>
+                        <div class="xpord-ai-override-inputs">
+                          <div class="xpord-ai-override-group">
+                            <label>[Actual Selling Price (₹)] <span class="req">*</span></label>
+                            <input type="number" id="xpord-ai-manual-price" placeholder="e.g. 1499" min="1" required />
+                          </div>
+                          <div class="xpord-ai-override-group">
+                            <label>[Discount %] <span class="req">*</span></label>
+                            <input type="number" id="xpord-ai-manual-discount" placeholder="e.g. 25" min="0" max="90" required />
+                          </div>
+                          <div class="xpord-ai-override-group">
+                            <label>[Product Badge Name (e.g., Bestseller)]</label>
+                            <input type="text" id="xpord-ai-manual-badge" placeholder="e.g. BESTSELLER, NEW DROP" />
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Action Submission Button -->
+                      <div class="xpord-ai-submit-row">
+                        <button 
+                          type="button" 
+                          id="xpord-ai-publish-btn" 
+                          class="xpord-ai-publish-btn" 
+                          onclick="publishExtractedProductToFirestore()"
+                        >
+                          <i class="fa-solid fa-cloud-arrow-up"></i> Publish & Live to Xpord Store
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ================================================================
+                   SECTION B: Cognitive Admin Chat
+                   ================================================================ -->
+              <div id="xpord-ai-tab-chat" class="xpord-ai-tab-content hidden">
+                <!-- Cognitive Chat Stream Container -->
+                <div id="xpord-ai-chat-stream" class="xpord-ai-chat-stream">
+                  <!-- Initial Welcome Message -->
+                  <div class="xpord-ai-msg system">
+                    <div class="xpord-ai-msg-avatar"><i class="fa-solid fa-brain"></i></div>
+                    <div class="xpord-ai-msg-bubble">
+                      <div class="xpord-ai-msg-header">
+                        <strong>Xpord Core System Intelligence</strong>
+                        <span class="xpord-ai-msg-time">Just Now</span>
+                      </div>
+                      <div class="xpord-ai-msg-content">
+                        <p>Namaste! I am the <strong>Xpord Core System Intelligence</strong> with full operational read/write access over your live catalog state and cloud database.</p>
+                        <p>You can converse naturally in <strong>English, Hindi, or Hinglish</strong> to query analytics, change prices, toggle stock, or manage store collections in real-time.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Suggestion Action Chips -->
+                <div class="xpord-ai-suggestion-chips">
+                  <span class="xpord-ai-chips-label"><i class="fa-solid fa-bolt"></i> Quick Directives:</span>
+                  <button type="button" onclick="sendXpordAiPrompt('Change price of product id xpord-01 to 1499')">🏷️ Change price of xpord-01 to 1499</button>
+                  <button type="button" onclick="sendXpordAiPrompt('Show total count of oversized shirts')">👕 Count oversized shirts</button>
+                  <button type="button" onclick="sendXpordAiPrompt('Mark item xpord-02 as out of stock')">📦 Mark xpord-02 out of stock</button>
+                  <button type="button" onclick="sendXpordAiPrompt('Calculate average shirt price')">💰 Calculate average shirt price</button>
+                  <button type="button" onclick="sendXpordAiPrompt('Show total orders and revenue summary')">📊 Store revenue & orders summary</button>
+                </div>
+
+                <!-- Real-Time Chat Input Bar -->
+                <form id="xpord-ai-chat-form" class="xpord-ai-chat-input-bar" onsubmit="handleXpordAdminChatSubmit(event)">
+                  <input 
+                    type="text" 
+                    id="xpord-ai-chat-input" 
+                    placeholder="Ask intelligence or command store (English, Hindi, Hinglish)..." 
+                    autocomplete="off"
+                    required
+                  />
+                  <button type="submit" id="xpord-ai-chat-send-btn" aria-label="Send Directive">
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Wishlist Modal Drawer -->
+    <div id="wishlist-modal-wrapper" class="modal-wrapper hidden">
+      <div id="wishlist-backdrop" class="modal-backdrop" onclick="closeWishlistModal()"></div>
+      <div class="quick-view-modal-content" style="max-width: 680px;">
+        <button class="modal-close-btn" aria-label="Close Wishlist" onclick="closeWishlistModal()"><i class="fa-solid fa-xmark"></i></button>
+        <div style="padding:1.5rem;">
+          <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1.5rem; border-bottom:1px solid var(--border-medium); padding-bottom:1rem;">
+            <i class="fa-solid fa-heart" style="font-size:1.5rem; color:#dc2626;"></i>
+            <div>
+              <h2 style="font-family:var(--font-display); font-size:1.4rem; font-weight:800; text-transform:uppercase; margin:0;">Saved Wishlist</h2>
+              <p style="font-size:0.85rem; color:var(--text-secondary); margin:0;">Your favorite apparel items saved for later.</p>
+            </div>
+          </div>
+          <div id="wishlist-items-container" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(240px, 1fr)); gap:1rem; max-height:60vh; overflow-y:auto; padding-right:0.3rem;">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Customer Orders & Live Tracking Modal (Screen 2: Order History & Screen 3: Order Details) -->
+    <div id="orders-modal-wrapper" class="modal-wrapper hidden">
+      <div id="orders-backdrop" class="modal-backdrop" onclick="closeOrdersModal()"></div>
+      <div class="orders-modal-content-dribbble">
+        <div id="orders-list-container">
+          <!-- Rendered dynamically: Order History List OR Order Details Screen -->
+        </div>
+      </div>
+    </div>
+
+    <!-- User Account / Login / Signup Profile Modal -->
+    <div id="user-modal-wrapper" class="modal-wrapper hidden">
+      <div id="user-backdrop" class="modal-backdrop" onclick="closeUserModal()"></div>
+      <div class="quick-view-modal-content" style="max-width: 480px;">
+        <button class="modal-close-btn" aria-label="Close Account Modal" onclick="closeUserModal()"><i class="fa-solid fa-xmark"></i></button>
+        <div style="padding:1.5rem;">
+          <div id="user-modal-body">
+            <!-- Rendered dynamically (Login / Signup / Profile) -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Available Promo Codes & Offers Modal -->
+    <div id="coupons-modal-wrapper" class="modal-wrapper hidden">
+      <div id="coupons-backdrop" class="modal-backdrop" onclick="closeCouponsModal()"></div>
+      <div class="quick-view-modal-content" style="max-width: 560px;">
+        <button class="modal-close-btn" aria-label="Close Offers Modal" onclick="closeCouponsModal()"><i class="fa-solid fa-xmark"></i></button>
+        <div style="padding:1.5rem;">
+          <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1.25rem; border-bottom:1px solid var(--border-medium); padding-bottom:1rem;">
+            <div style="width:42px; height:42px; border-radius:50%; background:var(--bg-subtle); display:flex; align-items:center; justify-content:center; color:var(--accent-gold); font-size:1.25rem; border:1px solid var(--border-medium);">
+              <i class="fa-solid fa-tags"></i>
+            </div>
+            <div>
+              <h2 style="font-family:var(--font-display); font-size:1.35rem; font-weight:800; text-transform:uppercase; margin:0;">Available Offers & Promo Codes</h2>
+              <p style="font-size:0.82rem; color:var(--text-secondary); margin:0;">Select or copy any verified promo code to apply instant savings to your order.</p>
+            </div>
+          </div>
+          
+          <div id="coupons-list-container" style="display:flex; flex-direction:column; gap:0.85rem; max-height:60vh; overflow-y:auto; padding-right:0.3rem;">
+            <!-- Dynamically populated via script.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cancel Order Confirmation Modal -->
+    <div id="cancel-order-modal-wrapper" class="modal-wrapper hidden">
+      <div id="cancel-order-backdrop" class="modal-backdrop" onclick="closeCancelOrderModal()"></div>
+      <div class="quick-view-modal-content cancel-modal-card">
+        <button class="modal-close-btn" aria-label="Close Cancel Modal" onclick="closeCancelOrderModal()"><i class="fa-solid fa-xmark"></i></button>
+        <div class="cancel-modal-body">
+          <div class="cancel-modal-icon-wrapper">
+            <div class="cancel-modal-icon-ring">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+          </div>
+          
+          <h2 class="cancel-modal-title">Cancel Order Request</h2>
+          <p class="cancel-modal-subtitle">Are you sure you want to cancel order <strong id="cancel-modal-order-id" class="text-gold">#XPD-00000</strong>?</p>
+          
+          <div class="cancel-reason-section">
+            <label class="cancel-field-label">Please select reason for cancellation: <span class="text-red">*</span></label>
+            <div class="cancel-reasons-list">
+              <label class="cancel-radio-card selected" onclick="selectCancelReason(this, 'Ordered by mistake / duplicate order')">
+                <input type="radio" name="cancel_reason" value="Ordered by mistake / duplicate order" checked />
+                <span>Ordered by mistake / duplicate order</span>
+              </label>
+              <label class="cancel-radio-card" onclick="selectCancelReason(this, 'Want to change size, color or address')">
+                <input type="radio" name="cancel_reason" value="Want to change size, color or address" />
+                <span>Want to change size, color or shipping address</span>
+              </label>
+              <label class="cancel-radio-card" onclick="selectCancelReason(this, 'Found better price / changed my mind')">
+                <input type="radio" name="cancel_reason" value="Found better price / changed my mind" />
+                <span>Found better price / changed my mind</span>
+              </label>
+              <label class="cancel-radio-card" onclick="selectCancelReason(this, 'Delivery time is too long')">
+                <input type="radio" name="cancel_reason" value="Delivery time is too long" />
+                <span>Expected delivery time is taking too long</span>
+              </label>
+              <label class="cancel-radio-card" onclick="selectCancelReason(this, 'Other reason')">
+                <input type="radio" name="cancel_reason" value="Other reason" />
+                <span>Other reason</span>
+              </label>
+            </div>
+
+            <div style="margin-top:0.75rem;">
+              <label class="cancel-field-label">Additional Comments / Remarks (Optional):</label>
+              <textarea id="cancel-reason-comment" rows="2" class="cancel-textarea" placeholder="Tell us more about why you're cancelling..."></textarea>
+            </div>
+          </div>
+
+          <div class="cancel-modal-actions">
+            <button type="button" class="cancel-keep-btn" onclick="closeCancelOrderModal()">
+              <i class="fa-solid fa-arrow-left"></i> Keep Order
+            </button>
+            <button type="button" id="btn-confirm-cancellation" class="cancel-confirm-btn" onclick="confirmCancelOrder()">
+              <i class="fa-solid fa-ban"></i> Confirm Cancellation
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cannot Cancel Shipped Order Alert Modal -->
+    <div id="cannot-cancel-modal-wrapper" class="modal-wrapper hidden">
+      <div id="cannot-cancel-backdrop" class="modal-backdrop" onclick="closeCannotCancelModal()"></div>
+      <div class="quick-view-modal-content cannot-cancel-card">
+        <button class="modal-close-btn" aria-label="Close Alert Modal" onclick="closeCannotCancelModal()"><i class="fa-solid fa-xmark"></i></button>
+        <div class="cannot-cancel-body">
+          <div class="cannot-cancel-icon-wrapper">
+            <div class="cannot-cancel-truck-beacon">
+              <i class="fa-solid fa-truck-fast anim-truck"></i>
+            </div>
+          </div>
+
+          <span class="cannot-cancel-badge"><i class="fa-solid fa-lock"></i> Cancellation Locked</span>
+          <h2 class="cannot-cancel-title">Order Cannot Be Cancelled</h2>
+          
+          <div class="cannot-cancel-info-box">
+            <p>Order <strong id="cannot-cancel-order-id" class="text-gold">#XPD-00000</strong> has already been <strong id="cannot-cancel-status-text" class="text-indigo">Shipped & Handed over to Courier</strong>.</p>
+            <p class="cannot-cancel-subtext">Once an apparel parcel is dispatched from our fulfillment facility, real-time in-transit cancellation is disabled. You can easily refuse delivery at doorstep or initiate an effortless return/exchange once delivered.</p>
+          </div>
+
+          <div class="cannot-cancel-features">
+            <div class="cannot-feature-item">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>100% Free Doorstep Returns</span>
+            </div>
+            <div class="cannot-feature-item">
+              <i class="fa-solid fa-headset"></i>
+              <span>24/7 Dedicated Concierge</span>
+            </div>
+          </div>
+
+          <div class="cannot-cancel-actions">
+            <button type="button" class="primary-btn full-width-btn" onclick="closeCannotCancelModal()">
+              <i class="fa-solid fa-check"></i> Understood, Keep Tracking
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Liquid-Pop Sticky Bottom Navigation Bar (Mobile Viewports Only) -->
+    <nav id="xpord-fluid-nav" class="xpord-fluid-nav" aria-label="Mobile Navigation Bar">
+      <div class="xpord-fluid-nav-track">
+        <!-- Node 1: Home -->
+        <button type="button" class="xpord-nav-node active" data-tab="home" onclick="handleFluidNavClick('home', event)" aria-label="Home">
+          <div class="xpord-nav-icon-box">
+            <i class="fa-solid fa-house"></i>
+          </div>
+        </button>
+
+        <!-- Node 2: Categories -->
+        <button type="button" class="xpord-nav-node" data-tab="categories" onclick="handleFluidNavClick('categories', event)" aria-label="Categories">
+          <div class="xpord-nav-icon-box">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+        </button>
+
+        <!-- Node 3: Wishlist -->
+        <button type="button" class="xpord-nav-node" data-tab="wishlist" onclick="handleFluidNavClick('wishlist', event)" aria-label="Wishlist">
+          <div class="xpord-nav-icon-box">
+            <i class="fa-regular fa-heart"></i>
+            <span id="fluid-wishlist-badge" class="fluid-nav-badge hidden">0</span>
+          </div>
+        </button>
+
+        <!-- Node 4: Cart Bag -->
+        <button type="button" class="xpord-nav-node" data-tab="cart" onclick="handleFluidNavClick('cart', event)" aria-label="Cart Bag">
+          <div class="xpord-nav-icon-box">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span id="fluid-cart-badge" class="fluid-nav-badge hidden">0</span>
+          </div>
+        </button>
+
+        <!-- Node 5: Account Profile -->
+        <button type="button" class="xpord-nav-node" data-tab="account" onclick="handleFluidNavClick('account', event)" aria-label="Account Profile">
+          <div class="xpord-nav-icon-box">
+            <i class="fa-regular fa-user"></i>
+          </div>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Main JavaScript App Module -->
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
+
+
